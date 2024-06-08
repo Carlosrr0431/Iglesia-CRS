@@ -11,7 +11,6 @@ import { sendForm } from "../../../action.js";
 
 import { HiPlusCircle } from "react-icons/hi2";
 import Link from "next/link";
-import TestimonialSlider from '../../../(components)/TestimonialSlider'
 import { useEffect, useRef, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -134,22 +133,22 @@ const Iglesia = () => {
                 Nuestra <span className="font-bold ">Historia</span>
             </h2>
 
-            <div class="mb-10 px-2 py-0 lg:py-20 h-[80%] lg:max-h-[80%] w-full flex justify-center">
-                <div class="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
-                    <div class="lg:w-1/2">
-                        <div class="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none lg:rounded-lg"
+            <div className="mb-10 px-2 py-0 lg:py-20 h-[80%] lg:max-h-[80%] w-full flex justify-center">
+                <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
+                    <div className="lg:w-1/2">
+                        <div className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none lg:rounded-lg"
 
                         >
                             <Image src={Portada} height={0} width={0} alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div class="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none intro lg:rounded-lg overflow-y-scroll max-h-[40%]  lg:max-h-[80%] biblia ">
-                        <h2 class="text-3xl text-gray-800 font-bold">
+                    <div className="py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none intro lg:rounded-lg overflow-y-scroll max-h-[40%]  lg:max-h-[80%] biblia ">
+                        <h2 className="text-3xl text-gray-800 font-bold">
                             Nuestros comienzos como
-                            <span class="text-indigo-600"> Iglesia</span>
+                            <span className="text-indigo-600"> Iglesia</span>
                         </h2>
-                        <p class="mt-4 text-gray-600">
-                            The "Eco-Tracker" project aims to create a web-based platform that encourages individuals to adopt
+                        <p className="mt-4 text-gray-600">
+                            The Eco-Tracker project aims to create a web-based platform that encourages individuals to adopt
                             sustainable lifestyle choices and actively contribute to environmental conservation. The platform will
                             provide users with personalized tracking, education, and engagement features to empower them to make
                             eco-friendly decisions in various aspects of their lives.
@@ -160,22 +159,22 @@ const Iglesia = () => {
             </div>
 
 
-            <div class="mb-10 px-2 py-0 lg:py-20 h-[80%] lg:max-h-[80%] w-full flex justify-center">
-                <div class="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
-                    <div class="lg:w-1/2 order-2">
-                        <div class="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none lg:rounded-lg"
+            <div className="mb-10 px-2 py-0 lg:py-20 h-[80%] lg:max-h-[80%] w-full flex justify-center">
+                <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
+                    <div className="lg:w-1/2 order-2">
+                        <div className="lg:scale-110 h-80 bg-cover lg:h-full rounded-b-none lg:rounded-lg"
 
                         >
                             <Image src={Portada} height={0} width={0} alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div class="order-1 py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none intro lg:rounded-lg overflow-y-scroll max-h-[40%]  lg:max-h-[80%] biblia ">
-                        <h2 class="text-3xl text-gray-800 font-bold">
+                    <div className="order-1 py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none intro lg:rounded-lg overflow-y-scroll max-h-[40%]  lg:max-h-[80%] biblia ">
+                        <h2 className="text-3xl text-gray-800 font-bold">
                             Nuestros comienzos como
-                            <span class="text-indigo-600"> Iglesia</span>
+                            <span className="text-indigo-600"> Iglesia</span>
                         </h2>
-                        <p class="mt-4 text-gray-600">
-                            The "Eco-Tracker" project aims to create a web-based platform that encourages individuals to adopt
+                        <p className="mt-4 text-gray-600">
+                            The Eco-Tracker project aims to create a web-based platform that encourages individuals to adopt
                             sustainable lifestyle choices and actively contribute to environmental conservation. The platform will
                             provide users with personalized tracking, education, and engagement features to empower them to make
                             eco-friendly decisions in various aspects of their lives.

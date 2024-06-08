@@ -1,19 +1,13 @@
 import "./globals.css";
 
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import Link from "next/link";
 import Nav from "./(components)/Nav";
 import Header from "./(components)/Header";
 import { AppWrapper } from "./(context)/AppWrapper";
-import Image from "next/image";
-import Whatsapp from "./public/boton de whatsapp.svg";
+
+
 import Providers from "./(providers)/Providers";
 import { Toaster } from "sonner";
-import WhatsApp from "./(components)/WhatsApp";
-import Biblia from "./(components)/Biblia";
 import BibliaNVI from "./(components)/BibliaNVI";
 import { BotonesFlotantes } from "./(components)/BotonesFlotantes";
 
