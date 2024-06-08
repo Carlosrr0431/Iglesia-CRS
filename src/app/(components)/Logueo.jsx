@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import { signIn } from 'next-auth/react'
-import Logo from '../../../public/logo crs.svg'
+import Logo from '../public/logo crs.svg'
 import { useSearchParams } from 'next/navigation'
 
 export const Logueo = () => {
