@@ -25,7 +25,7 @@ const Home = () => {
             <span className="font-normal tracking-[0px]"> Un lugar para adorar al</span> <span>REY</span>
           </h1>
 
-          <button onClick={() => setShowModal(true)} class="bg-transparent text-black/70 z-20 hover:bg-black/90  font-semibold hover:text-white py-2 px-4 bg-white  hover:border-transparent rounded">
+          <button onClick={() => setShowModal(true)} className="bg-transparent text-black/70 z-20 hover:bg-black/90  font-semibold hover:text-white py-2 px-4 bg-white  hover:border-transparent rounded">
             PEDIR ORACION
           </button>
 

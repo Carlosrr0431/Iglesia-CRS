@@ -1,39 +1,26 @@
 "use client"
 
-import { FaPlay, FaPause } from "react-icons/fa";
-import { FaFastBackward } from "react-icons/fa";
-import { FaFastForward } from "react-icons/fa";
-import { FaVolumeMute } from "react-icons/fa";
-import { FaVolumeUp } from "react-icons/fa";
-import { FaVolumeDown } from "react-icons/fa";
-import RadioIcon from '../../public/logo para reproductor.svg'
 
-import ChatAlt from '../../(components)/ChatAlt'
-import Loguear from '../../(components)/Loguear'
+
 import Radio2 from '../../(components)/Radio'
 
 import Providers from '../../(providers)/Providers'
 
-import Link from "next/link";
+
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { RadioSpectre } from "../../(components)/RadioSpectre";
-import { useAppContext } from "../../(context)/AppWrapper";
-import Socials from "../../(components)/Socials.jsx";
 
+import { useAppContext } from "../../(context)/AppWrapper";
 
 import Portada from "../../public/IMAGEN PARA PORTADA DE RADIO.jpg";
-import Degradado from '../../public/DEGRADADO PARA RADIO.svg'
 import { ChatResponsive } from "@/app/(components)/ChatResponsive";
 
 const Radio = () => {
-  const [control, setControl] = useState(true);
+
   const [count, setCount] = useState(0);
   const [limite, setLimite] = useState(3);
   const inputVolumen = useRef();
-  const [botonAtras, setBotonAtras] = useState(false);
-  const [botonPlayPause, setBotonPlayPause] = useState(false);
-  const [botonAdelantar, setBotonAdelantar] = useState(false);
+
   const [controlVolumen, setControlVolumen] = useState(true);
   const [volumenAct, setVolumenAct] = useState(0)
   const [controlVolumenAdelantar, setControlVolumenAdelantar] = useState(true);

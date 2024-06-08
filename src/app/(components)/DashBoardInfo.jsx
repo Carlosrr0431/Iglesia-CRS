@@ -46,32 +46,32 @@ const DashBoardInfo = ({ tipo }) => {
 
             {first && tipo != 'Oraciones' && first.filter(elem => elem.titulo == tipo).map((elem, index) => {
                 return (
-                    <div key={index} class="relative flex  flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-[5px] w-[450px]">
-                        <div class="p-6">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                    <div key={index} className="relative flex  flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-[5px] w-[450px]">
+                        <div className="p-6">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Motivo: {elem.titulo}
                             </h5>
                         </div>
 
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Descripción: {elem.descripcion}
                             </h5>
                         </div>
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Monto:  ${elem.monto}
                             </h5>
                         </div>
 
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Fecha: {elem.createdAt.toString().slice(2, 10).split('-').reverse().join('/')}
                             </h5>
                         </div>
 
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Email: {elem.email}
                             </h5>
                         </div>
@@ -86,27 +86,27 @@ const DashBoardInfo = ({ tipo }) => {
 
             {oraciones && tipo == 'Oraciones' && oraciones.map((elem, index) => {
                 return (
-                    <div key={index} class="relative flex  flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-[5px] w-[450px] h-[300px]">
+                    <div key={index} className="relative flex  flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-[5px] w-[450px] h-[300px]">
 
-                        <div class="p-6">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Nombre: {elem.nombre}
                             </h5>
                         </div>
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Telefono:  {elem.telefono}
                             </h5>
                         </div>
 
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Motivo: {elem.motivo}
                             </h5>
                         </div>
 
-                        <div class="p-6 pt-0">
-                            <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        <div className="p-6 pt-0">
+                            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                 Fecha: {elem.createdAt.toString().slice(2, 10).split('-').reverse().join('/')}
                             </h5>
                         </div>

@@ -49,34 +49,34 @@ const Modal = ({ setShowModal, nameCard }) => {
         <div className={`fixed inset-0 bg-[#005B82] z-20 bg-opacity-100 backdrop-blur-sm flex items-center justify-center h-full w-full`}>
             <form action={async (formData) => {
                 return await donate(formData)
-            }} class="w-full md:w-1/2   p-6  rounded-[5px]">
+            }} className="w-full md:w-1/2   p-6  rounded-[5px]">
 
                 <div>
-                    <div class="flex flex-col mb-3">
+                    <div className="flex flex-col mb-3">
 
                         <input
                             type="text" id="name"
-                            class="px-3 py-2 bg-white border-gray-900 focus:border-red-500 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
+                            className="px-3 py-2 bg-white border-gray-900 focus:border-red-500 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
                             autocomplete="off"
                             placeholder="Nombre"
 
                         />
                     </div>
 
-                    <div class="flex flex-col mb-3">
+                    <div className="flex flex-col mb-3">
 
                         <textarea
                             placeholder="Mensaje"
                             rows="4" id="mensaje"
                             name="mensaje"
-                            class="px-3 py-2 bg-white border-gray-900 focus:border-red-500 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
+                            className="px-3 py-2 bg-white border-gray-900 focus:border-red-500 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
                         ></textarea>
                     </div>
                 </div>
-                <div class="w-full pt-1 flex gap-x-8 justify-between">
+                <div className="w-full pt-1 flex gap-x-8 justify-between">
 
 
-                    <span class="inline-flex  items-center px-3  text-md text-black  bg-white border rounded-e-0 border-gray-300 rounded-[5px] dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <span className="inline-flex  items-center px-3  text-md text-black  bg-white border rounded-e-0 border-gray-300 rounded-[5px] dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                         $  <input
                             name="monto"
                             type="number"
@@ -86,10 +86,10 @@ const Modal = ({ setShowModal, nameCard }) => {
                         />
                     </span>
 
-                    <div className="space-x-2">  <button onClick={setShowModal} type="button" class="px-3 py-2 bg-red-500 border-gray-900  hover:bg-red-600  focus:outline-none   text-white  rounded-[5px]">
+                    <div className="space-x-2">  <button onClick={setShowModal} type="button" className="px-3 py-2 bg-red-500 border-gray-900  hover:bg-red-600  focus:outline-none   text-white  rounded-[5px]">
                         Cancelar
                     </button>
-                        <button type="submit" class="px-3 py-2  bg-gradient-to-r from-green-500 to-green-600  focus:outline-none  hover:bg-gradient-to-r hover:from-green-700 hover:to-green-700   text-white  rounded-[5px]">
+                        <button type="submit" className="px-3 py-2  bg-gradient-to-r from-green-500 to-green-600  focus:outline-none  hover:bg-gradient-to-r hover:from-green-700 hover:to-green-700   text-white  rounded-[5px]">
                             Enviar
                         </button></div>
 

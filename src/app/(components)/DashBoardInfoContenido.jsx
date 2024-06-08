@@ -132,7 +132,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
                             </div>
                             <div className="p-6">
 
-                                <h6 claclassNamess="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
+                                <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
                                     {elem.titulo}
                                 </h6>
 
@@ -142,9 +142,9 @@ const DashBoardInfoContenido = ({ tipo }) => {
                                     <span className=' font-bold'>Fecha</span>: {elem.fecha.slice(2, 10).split('-').reverse().join('/')}
                                 </h3>
 
-                                <a class="flex mt-14" >
+                                <a className="flex mt-14" >
                                     <button
-                                        class="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => {
                                             setShowModal(true)
@@ -156,7 +156,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                                     </button>
                                     <button
-                                        class="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => EliminarEvento(tipo, elem.id)
                                         }
@@ -206,9 +206,9 @@ const DashBoardInfoContenido = ({ tipo }) => {
                                     <span className=' font-bold'>Fecha</span>: {elem.fecha.slice(2, 10).split('-').reverse().join('/')}
                                 </h3>
 
-                                <a class="flex mt-14" >
+                                <a className="flex mt-14" >
                                     <button
-                                        class="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => {
                                             setShowModal(true)
@@ -220,7 +220,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                                     </button>
                                     <button
-                                        class="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => EliminarEvento(tipo, elem.id)
                                         }
