@@ -2,10 +2,10 @@
 
 import React from 'react'
 
-import Ofrenda from '../../public/OFRENDA.svg'
-import Diezmo from '../../public/DIEZMO.svg'
-import Donar from '../../public/DONAR.svg'
-import Primicia from '../../public/PRIMICIA.svg'
+import Ofrenda from '../../public/ofrenda.svg'
+import Diezmo from '../../public/diezo.svg'
+import Donar from '../../public/donar.svg'
+import Primicia from '../../public/primicia.svg'
 
 import CardFlip from '../../(components)/CardFlip.jsx'
 
