@@ -6,16 +6,14 @@ import DashBoardInfo from "../../(components)/DashBoardInfo";
 
 import { signIn, useSession, signOut } from 'next-auth/react'
 import { useEffect } from 'react'
-import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 import { TbLogout2 } from "react-icons/tb";
 import { GiPrayer } from "react-icons/gi";
-import Ofrenda from '../../public/OFRENDA.svg'
-import Diezmo from '../../public/DIEZMO.svg'
-import Donar from '../../public/DONAR.svg'
-import Primicia from '../../public/PRIMICIA.svg'
-import Logo from '../../public/logo crs.svg'
+import Ofrenda from '../../public/ofrenda.svg'
+import Diezmo from '../../public/diezmo.svg'
+import Donar from '../../public/donar.svg'
+import Primicia from '../../public/primicia.svg'
 import DashBoardInfoContenido from '@/app/(components)/DashBoardInfoContenido';
 
 const DashBoard = () => {
