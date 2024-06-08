@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.52 112.76">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .05em;
+      }
+
+      .cls-2 {
+        font-family: RobotoSlab-Medium, 'Roboto Slab';
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #636363;
+      }
+
+      .cls-2, .cls-4 {
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        letter-spacing: .05em;
+      }
+
+      .cls-6 {
+        font-size: 48.12px;
+        letter-spacing: .05em;
+      }
+
+      .cls-4 {
+        font-family: MontserratRoman-Medium, Montserrat;
+        font-size: 8.77px;
+      }
+
+      .cls-7 {
+        font-size: 43.92px;
+        letter-spacing: .05em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-3" d="M45.86,55.35c-10.08-4.57-13.01-12.66-9.76-23.79,9.76,5.67,13.02,13.6,9.76,23.79Z"/>
+    <path class="cls-3" d="M53.08,41.35c-12.86-9.79-14.53-31.31-7.26-41.35,12.76,9.08,16.61,27.09,7.26,41.35Z"/>
+  </g>
+  <text class="cls-2" transform="translate(0 96.79) scale(1.02 1)"><tspan class="cls-7" x="0" y="0">C</tspan><tspan class="cls-6" x="30.25" y="0">R</tspan><tspan class="cls-7" x="65.5" y="0">S</tspan></text>
+  <text class="cls-4" transform="translate(16.24 110.49) scale(1.02 1)"><tspan class="cls-5" x="0" y="0">R</tspan><tspan class="cls-1" x="6.77" y="0">adio Online</tspan></text>
+</svg>

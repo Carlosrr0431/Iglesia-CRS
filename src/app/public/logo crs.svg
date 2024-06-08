@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.91 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: RobotoSlab-Regular, 'Roboto Slab';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-3 {
+        letter-spacing: .05em;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 59.27px;
+      }
+
+      .cls-4 {
+        letter-spacing: .05em;
+      }
+
+      .cls-5 {
+        font-size: 78.04px;
+        letter-spacing: .05em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M65.18,104.39c-19.01-8.63-24.54-23.88-18.41-44.86,18.41,10.7,24.55,25.65,18.41,44.86Z"/>
+    <path class="cls-1" d="M78.8,78C54.55,59.53,51.4,18.94,65.1,0c24.07,17.13,31.34,51.1,13.7,78Z"/>
+  </g>
+  <text class="cls-2" transform="translate(0 178.85) scale(1.02 1)"><tspan class="cls-4" x="0" y="0">C</tspan><tspan class="cls-5" x="40.3" y="0">R</tspan><tspan class="cls-3" x="96.98" y="0">S</tspan></text>
+</svg>
