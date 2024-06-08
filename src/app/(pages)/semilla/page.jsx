@@ -3,7 +3,7 @@
 import React from 'react'
 
 import Ofrenda from '../../public/ofrenda.svg'
-import Diezmo from '../../public/diezo.svg'
+import Diezmo from '../../public/diezmo.svg'
 import Donar from '../../public/donar.svg'
 import Primicia from '../../public/primicia.svg'
 

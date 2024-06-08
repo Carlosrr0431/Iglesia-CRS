@@ -3,13 +3,6 @@ import React, { useEffect, useState } from 'react'
 
 
 import Image from "next/image"
-import Home from "../../public/PORTADA.jpg"
-import { fetchEventos, fetchEventosEspeciales } from '@/app/lib/data';
-import BibliaNVI from '@/app/(components)/BibliaNVI';
-import Dropdown from '@/app/(components)/Dropdown';
-// import { supabase } from '@/supabase/client';
-// import { createBrowserClient } from '@supabase/ssr'
-// import { createClient } from '@supabase/supabase-js'
 import { supabaseClient } from '@/supabase/client';
 
 
