@@ -9,10 +9,15 @@ export default withAuth({
   },
 
   callbacks: {
-    authorized({ req }) {
+    authorized({ token, req }) {
       console.log(req.nextUrl.pathname);
 
-      return true;
+      if (
+        token?.email == "carlos.facundo.rr@gmail.com" &&
+        req.nextUrl.pathname == "/dashboard"
+      ) {
+        return true;
+      } else return false;
     },
   },
 });
