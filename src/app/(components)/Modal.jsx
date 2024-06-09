@@ -1,16 +1,18 @@
 "use client"
-
-import { redirect } from "next/navigation";
 import { donate } from "../action";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Modal = ({ setShowModal, nameCard }) => {
 
 
+    const router = useRouter()
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        await createPreferenc(e.target.value[0], e.target.value[1])
+
+        await createPreferenc(e.target[2].value, e.target[1].value)
     }
 
     const createPreferenc = async (monto, descripcion) => {
@@ -29,9 +31,9 @@ const Modal = ({ setShowModal, nameCard }) => {
 
             );
 
-            const { result } = response.data;
+            const { result } = response.data
 
-            router.replace(result.init_point)
+            router.replace(result.sandbox_init_point)
 
         } catch (error) {
             console.log("El error es: " + error);

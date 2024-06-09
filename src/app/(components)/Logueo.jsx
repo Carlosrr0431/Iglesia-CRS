@@ -24,10 +24,9 @@ export const Logueo = () => {
                                 <div className="mt-10 grid space-y-4">
                                     <button
                                         className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 hover:bg-blue-50    ">
-                                        <div className="relative flex items-center space-x-4 justify-center" onClick={() => {
+                                        <div className="relative flex items-center space-x-4 justify-center" onClick={async () => {
 
-
-                                            signIn('google', { callbackUrl: '/dashboard'})
+                                            await signIn('google', { callbackUrl: '/dashboard' })
                                         }}>
                                             <Image src="https://www.svgrepo.com/show/475656/google-color.svg"
                                                 className="absolute left-0 w-5" alt="google logo" width={0} height={0} />

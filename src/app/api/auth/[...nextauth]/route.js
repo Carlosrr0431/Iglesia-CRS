@@ -9,15 +9,15 @@ const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId:
-        "36313790560-dnkqfkvlerrb2ujdpaqsn8q7avs72p5k.apps.googleusercontent.com",
-      clientSecret: "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",
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
-      },
+      process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.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,
+      // authorization: {
+      //   params: {
+      //     prompt: "consent",
+      //     access_type: "offline",
+      //     response_type: "code",
+      //   },
+      // },
     }),
   ],
 
