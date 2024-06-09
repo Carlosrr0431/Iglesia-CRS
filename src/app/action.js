@@ -241,5 +241,5 @@ export async function donate(formData) {
   
   });
 
-  redirect(preference.sandbox_init_point);
+  redirect(preference.init_point);
 }
