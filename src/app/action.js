@@ -235,7 +235,7 @@ export async function donate(formData) {
       },
       
     auto_return: "approved",
-    notification_url: "https://d0jvt1bv-3000.brs.devtunnels.ms/api/webhook",
+    notification_url: "https://iglesia-crs-qx4l.vercel.app/api/webhook",
     },
 
   

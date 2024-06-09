@@ -2,54 +2,48 @@
 
 import { redirect } from "next/navigation";
 import { donate } from "../action";
+import axios from "axios";
 
 const Modal = ({ setShowModal, nameCard }) => {
 
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
+    const handleSubmit = async (e) => {
+        e.preventDefault()
 
-    //     await donate(e)
-    // }
+        await createPreferenc(e.target.value[0], e.target.value[1])
+    }
 
-    // const createPreferenc = async (monto, descripcion) => {
-    //     try {
+    const createPreferenc = async (monto, descripcion) => {
+        try {
 
-    //         const response = await axios.post(
-    //             "/api/create_preference",
+            const response = await axios.post(
+                "/api/create_preference",
 
-    //             {
-    //                 title: nameCard,
-    //                 quantity: 1,
-    //                 price: monto,
-    //                 description: descripcion
+                {
+                    title: nameCard,
+                    quantity: 1,
+                    price: monto,
+                    description: descripcion
 
-    //             },
+                },
 
-    //         );
+            );
 
-    //         const { result } = response.data;
+            const { result } = response.data;
 
-    //         console.log(result);
+            router.replace(result.init_point)
 
-    //         router.replace(result.sandbox_init_point)
-
-    //     } catch (error) {
-    //         console.log("El error es: " + error);
-    //     }
-    // };
+        } catch (error) {
+            console.log("El error es: " + error);
+        }
+    };
 
 
     return (
 
-        // action={async(formData) => {
-        //     if (operacion == 'Modificar') return await actualizarDatos(formData, idEvento, tipo); else if (operacion == "Crear Evento") return await crearEvento(formData, tipo)
-        // }}
 
         <div className={`fixed inset-0 bg-[#005B82] z-20 bg-opacity-100 backdrop-blur-sm flex items-center justify-center h-full w-full`}>
-            <form action={async (formData) => {
-                return await donate(formData)
-            }} className="w-full md:w-1/2   p-6  rounded-[5px]">
+            <form onSubmit={handleSubmit} className="w-full md:w-1/2   p-6  rounded-[5px]">
 
                 <div>
                     <div className="flex flex-col mb-3">

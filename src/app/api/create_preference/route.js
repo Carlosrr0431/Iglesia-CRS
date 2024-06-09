@@ -31,7 +31,7 @@ export async function POST(request) {
       },
 
       auto_return: "approved",
-      notification_url: "https://jhprjrhs-3000.brs.devtunnels.ms/api/webhook",
+      notification_url: "https://iglesia-crs-vqz6.vercel.app/api/webhook",
     };
 
     const preference = new Preference(client);

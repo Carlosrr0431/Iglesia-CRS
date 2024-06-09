@@ -25,16 +25,6 @@ const Semilla = () => {
   return (
     <div className="relative montserrat w-full h-full  overflow-y-scroll overflow-x-hidden" >
 
-{/* 
-      Screen PX
-
-      xs: '475px',
-      sm: "640px",
-      md: "768px",
-      lg: "960px",
-      xl: "1200px", 
-*/}
-
       <h2 className="text-2xl  relative left-[13%] top-[10%]  lg:top-[17%] xl:top-[25%]">Elíge una opción:</h2>
       <div className="w-full h-full  flex flex-col gap-y-8  lg:space-x-8  items-center justify-center mt-36 lg:mt-0  overflow-y-auto xs:place-items-center   lg:mx-[0%]   lg:pb-0 xs:grid xs:grid-cols-2 xs:mr-[2%] xs:mt-0 xs:items-center xs:gap-y-14 xs:content-center lg:flex lg:flex-row mb-[90px] xs:mb-0">
 
