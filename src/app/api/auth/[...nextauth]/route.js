@@ -11,13 +11,7 @@ const handler = NextAuth({
       clientId:
       process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      // authorization: {
-      //   params: {
-      //     prompt: "consent",
-      //     access_type: "offline",
-      //     response_type: "code",
-      //   },
-      // },
+
     }),
   ],
 
@@ -25,15 +19,7 @@ const handler = NextAuth({
     async signIn({ user, account, profile, email, credentials }) {
     
       return true;
-      // console.log("Entro");
-      // if () {
-      //   return true;
-      // } else {
-      //   // Return false to display a default error message
-      //   return false;
-      //   // Or you can return a URL to redirect to:
-      //   // return '/unauthorized'
-      // }
+    
     },
   },
 });
