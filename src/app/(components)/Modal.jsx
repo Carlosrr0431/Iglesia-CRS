@@ -33,7 +33,9 @@ const Modal = ({ setShowModal, nameCard }) => {
 
             const { result } = response.data
 
-            router.replace(result.sandbox_init_point)
+            console.log(result);
+            // router.replace(result.sandbox_init_point)
+            router.replace(result.init_point)
 
         } catch (error) {
             console.log("El error es: " + error);

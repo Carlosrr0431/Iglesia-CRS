@@ -15,6 +15,8 @@ export async function POST(request) {
   if (resp?.resource) fuente = resp.resource;
 
   const paymenyId = resp?.data?.id;
+  
+  console.log(paymenyId);
 
   const response = await fetch(
     `https://api.mercadopago.com/v1/payments/${paymenyId}`,
