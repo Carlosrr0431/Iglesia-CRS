@@ -2,19 +2,18 @@
 import React from 'react'
 
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Pusher from 'pusher-js'
 
 import { postData } from "../action.js";
 
 import { BsFillSendFill } from "react-icons/bs";
-import { HiOutlineEmojiHappy } from "react-icons/hi";
+
 import { useAppContext } from "../(context)/AppWrapper.jsx";
 import { signIn, useSession } from "next-auth/react";
-import { MdOutlineBlock } from "react-icons/md";
-import { modificarPermiso, obtenerUsuario } from "../lib/data.js";
+
+import { modificarPermiso } from "../lib/data.js";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation.js";
 import Providers from "../(providers)/Providers.jsx";
 
 export const ChatResponsive = () => {
@@ -30,9 +29,6 @@ export const ChatResponsive = () => {
     const { disabled } = useAppContext()
     const formRef = useRef()
     const [permiso, setPermiso] = useState(true)
-    const searchParams = useSearchParams()
-
-    const search = searchParams.get('callbackUrl')
 
     const handleBlock = async (email) => {
 
