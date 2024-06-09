@@ -27,7 +27,7 @@ export const Logueo = () => {
                                         <div className="relative flex items-center space-x-4 justify-center" onClick={() => {
 
 
-                                            signIn('google')
+                                            signIn('google', { callbackUrl: '/dashboard'})
                                         }}>
                                             <Image src="https://www.svgrepo.com/show/475656/google-color.svg"
                                                 className="absolute left-0 w-5" alt="google logo" width={0} height={0} />

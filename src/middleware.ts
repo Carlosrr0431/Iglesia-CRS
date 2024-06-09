@@ -41,17 +41,14 @@ export default async function middleware(
     },
 
     callbacks: {
-      authorized({ token }) {
-        console.log(token?.email, req.nextUrl.pathname);
-
+      authorized({ token, req }) {
+        console.log(token, req.nextUrl.pathname);
         if (
           token?.email == "carlos.facundo.rr@gmail.com" &&
           req.nextUrl.pathname == "/dashboard"
-        )
+        ) {
           return true;
-        else if (req.nextUrl.pathname == "/user" && token?.email !== undefined)
-          return true;
-        else return false;
+        } else return false
       },
     },
   });

@@ -24,12 +24,6 @@ const handler = NextAuth({
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
     
-
-      await registrarUsuario( user.name, user.email)
-
-
-
-
       return true;
       // console.log("Entro");
       // if () {

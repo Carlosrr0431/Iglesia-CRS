@@ -17,27 +17,27 @@ const DashBoardInfo = ({ tipo }) => {
 
     useEffect(() => {
 
-        const getPayments = async () => {
-            const datos = await fetchPayments()
+        // const getPayments = async () => {
+        //     const datos = await fetchPayments()
 
-            setfirst(datos.reverse());
-        }
+        //     setfirst(datos.reverse());
+        // }
 
-        const getOraciones = async () => {
-            const datos = await fetchOraciones()
+        // const getOraciones = async () => {
+        //     const datos = await fetchOraciones()
 
-            setOraciones(datos.reverse())
-        }
+        //     setOraciones(datos.reverse())
+        // }
 
-        const getEventos = async () => {
-            const datos = await fetchEventos()
+        // const getEventos = async () => {
+        //     const datos = await fetchEventos()
 
-            setContenido(datos)
-        }
+        //     setContenido(datos)
+        // }
 
-        getPayments()
-        getOraciones()
-        getEventos()
+        // getPayments()
+        // getOraciones()
+        // getEventos()
     }, [contenido])
 
     return (
