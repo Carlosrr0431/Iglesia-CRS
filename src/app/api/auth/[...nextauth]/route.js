@@ -32,25 +32,9 @@ const handler = NextAuth({
       // await registrarUsuario( user.name, user.email)
 
       return true;
-      // console.log("Entro");
-      // if () {
-      //   return true;
-      // } else {
-      //   // Return false to display a default error message
-      //   return false;
-      //   // Or you can return a URL to redirect to:
-      //   // return '/unauthorized'
-      // }
+
     },
 
-    // async jwt({ token, user }) {
-  
-    //     token.name = user.name
-    //     token.email = user.email
-    //     token.picture = user.email
-
-    //   return token;
-    // },
   },
 });
 
