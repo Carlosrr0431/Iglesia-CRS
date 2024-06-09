@@ -4,14 +4,8 @@ import React from 'react'
 
 import { signIn } from 'next-auth/react'
 import Logo from '../public/logo crs.svg'
-import { useSearchParams } from 'next/navigation'
 
 export const Logueo = () => {
-
-    const searchParams = useSearchParams()
-
-    const search = searchParams.get('callbackUrl')
-
 
     return (
         <div className='w-full h-full bg-slate-800'>
@@ -33,7 +27,7 @@ export const Logueo = () => {
                                         <div className="relative flex items-center space-x-4 justify-center" onClick={() => {
 
 
-                                            signIn('google', { search, callbackUrl: search })
+                                            signIn('google')
                                         }}>
                                             <Image src="https://www.svgrepo.com/show/475656/google-color.svg"
                                                 className="absolute left-0 w-5" alt="google logo" width={0} height={0} />
