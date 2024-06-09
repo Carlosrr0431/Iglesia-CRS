@@ -9,7 +9,7 @@ export default withAuth({
   },
 
   callbacks: {
-    authorized({ token, req }) {
+    authorized({ req, token }) {
       if (
         token?.email == "carlos.facundo.rr@gmail.com" &&
         req.nextUrl.pathname.startsWith("/dashboard")

@@ -27,14 +27,21 @@ const handler = NextAuth({
     }),
   ],
 
+  jwt: {
+    async encode({ secret, token }) {
+      return jwt.sign(token, secret);
+    },
+    async decode({ secret, token }) {
+      return jwt.verify(token, secret);
+    },
+  },
+
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       // await registrarUsuario( user.name, user.email)
 
-      return true;
-
+      return user;
     },
-
   },
 });
 
