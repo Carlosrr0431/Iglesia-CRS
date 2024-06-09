@@ -43,14 +43,14 @@ const handler = NextAuth({
       // }
     },
 
-    async jwt({ token, user }) {
+    // async jwt({ token, user }) {
   
-        token.name = user.name
-        token.email = user.email
-        token.picture = user.email
+    //     token.name = user.name
+    //     token.email = user.email
+    //     token.picture = user.email
 
-      return token;
-    },
+    //   return token;
+    // },
   },
 });
 
