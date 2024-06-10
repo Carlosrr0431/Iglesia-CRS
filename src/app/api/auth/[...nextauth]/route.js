@@ -8,14 +8,6 @@ const handler = NextAuth({
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
-
-      // authorization: {
-      //   params: {
-      //     prompt: "consent",
-      //     access_type: "offline",
-      //     response_type: "code",
-      //   },
-      // },
       profile(profile) {
         return {
           id: profile.sub,
@@ -35,7 +27,12 @@ const handler = NextAuth({
       return true;
     },
 
-    async jwt( { token } ) {
+    async jwt( { token, user } ) {
+
+      if ( user?.email == "carlos.facundo.rr@gmail.com"){
+        token.role = "Admin"
+      }
+
       return token;
     }
   },
@@ -43,23 +40,3 @@ const handler = NextAuth({
 
 export { handler as GET, handler as POST };
 
-// const handler = NextAuth({
-//   providers: [
-//     GoogleProvider({
-//       clientId:
-//       process.env.AUTH_GOOGLE_ID,
-//       clientSecret: process.env.AUTH_GOOGLE_SECRET,
-
-//     }),
-//   ],
-
-//   callbacks: {
-//     async signIn({ user, account, profile, email, credentials }) {
-
-//       return true;
-
-//     },
-//   },
-// });
-
-// export { handler as GET, handler as POST };

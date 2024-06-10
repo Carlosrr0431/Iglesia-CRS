@@ -10,9 +10,10 @@ export default withAuth({
 
   callbacks: {
     authorized({ req, token }) {
+
       if (
         token?.email == "carlos.facundo.rr@gmail.com" &&
-        req.nextUrl.pathname.startsWith("/dashboard")
+        req.nextUrl.pathname.startsWith("/dashboard") && token?.role == "Admin"
       ) {
         return true;
       } else return false;
