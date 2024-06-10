@@ -8,6 +8,7 @@ const handler = NextAuth({
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
+
       // authorization: {
       //   params: {
       //     prompt: "consent",
@@ -27,21 +28,16 @@ const handler = NextAuth({
     }),
   ],
 
-  jwt: {
-    async encode({ secret, token }) {
-      return jwt.sign(token, secret);
-    },
-    async decode({ secret, token }) {
-      return jwt.verify(token, secret);
-    },
-  },
-
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       // await registrarUsuario( user.name, user.email)
 
-      return user;
+      return true;
     },
+
+    async jwt( { token } ) {
+      return token;
+    }
   },
 });
 
