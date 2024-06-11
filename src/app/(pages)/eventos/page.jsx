@@ -170,7 +170,7 @@ const Eventos = () => {
                             key={itemIndex}
                             className={`${index == itemIndex &&
                                 "text-accent-[#ffffff] font-bold after:w-[100%] after:bg-white after:transition-all after:duration-300"
-                                }  cursor-pointer capitalize xl:text-2xl text-start text-md relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 montserrat after:left-0`}
+                                }  cursor-pointer capitalize xl:text-2xl text-start text-[15px] relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 montserrat after:left-0`}
                         >
                             {item.title}
                         </div>
@@ -198,7 +198,7 @@ const Eventos = () => {
                                 </div>
 
 
-                                <div className='absolute bottom-0 flex mx-[70px] rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
+                                <div className='absolute bottom-0 flex mx-[35px] rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
                                     <div className='flex flex-col justify-evenly p-4'>
                                         <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                             {item.titulo}
