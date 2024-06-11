@@ -21,18 +21,13 @@ export const navData = [
   { name: "Radio", path: "/radio", icon: Radio },
   { name: "La Iglesia", path: "/iglesia", icon: Iglesia },
   {
-    name: "eventos",
+    name: "Eventos",
     path: "/eventos",
     icon: Eventos,
   },
-  {
-    name: "Tienda",
-    path: "/tienda",
-    icon: Tienda,
-  },
 
   {
-    name: "ubicacion",
+    name: "Ubicacion",
     path: "/ubicacion",
     icon: Ubicacion,
   },
@@ -46,7 +41,7 @@ const Nav = () => {
     <nav className={`${pathname == '/dashboard' ? 'hidden' : 'flex'} montserrat  flex-col  items-center xl:justify-center gap-y-4  fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 w-full top-0 xl:w-12 xl:max-w-md xl:h-screen`}>
       <div
         
-        className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-5 px-4 md:px-40 xl:px-0 h-[80px] backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full xl:h-max py-4 bg-white/10"
+        className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-5 px-4 md:px-40 xl:px-0 h-[60px]  backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full xl:h-max py-4 bg-slate-800 opacity-80"
       >
         {navData.map((link, index) => {
           return (
@@ -67,9 +62,12 @@ const Nav = () => {
                 </div>
               </div>
 
-              <div className="" >
-                <Image src={link.icon} width={0} height={0} alt="" className={`${link.name == 'Mi Semilla' ? '-mb-2' : ''} max-w-[25px] max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85]`} />
+              <div className="flex  flex-col justify-center items-center gap-y-1" >
+                <Image src={link.icon} width={0} height={0} alt="" className={`${link.name == 'Mi Semilla' ? 'xl:mb-0' : 'xl:mb-2'} max-w-[25px] max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85]`} />
+                <p className="text-[11px] text-center font-bold xl:hidden block">{link.name}</p>
               </div>
+
+
             </Link>
           );
         })}

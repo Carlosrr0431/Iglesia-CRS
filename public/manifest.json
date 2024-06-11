@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Next Example",
-    "short_name": "nextex",
-    "description": "nextjs example description",
+    "name": "Iglesia CRS",
+    "short_name": "CRS",
+    "description": "Iglesia Centro de Restauración",
     "icons": [
         {
             "src": "/icon-192x192.png",

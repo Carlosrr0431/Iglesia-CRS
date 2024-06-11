@@ -19,7 +19,7 @@ const Home = () => {
         <div className={`${showModal ? 'hidden' : 'block'} text-center montserrat flex   flex-col justify-center xl:mx-auto w-full items-center  xl:text-center h-full container`}>
           <h1
 
-            className="h2 z-20 xl:w-[1200px] font-bold mx-auto items-center tracking-[10px]"
+            className="h2 z-20  font-bold mx-auto items-center text-center  tracking-[10px]"
           >
             ¡BIENVENIDO! <br />
             <span className="font-normal tracking-[0px]"> Un lugar para adorar al</span> <span>REY</span>
