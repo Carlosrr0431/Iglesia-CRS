@@ -15,8 +15,8 @@ import { SwipperRadio } from '@/app/(components)/SwipperRadio';
 
 const Radio = () => {
 
-  const [width, setWidth] = useState(window?.innerWidth);
-  const [height, setHeight] = useState(window?.innerHeight);
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
 
   useEffect(() => {
     window?.addEventListener("resize", () => {
