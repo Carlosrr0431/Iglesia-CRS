@@ -13,73 +13,85 @@ import Portada from "../../public/IMAGEN PARA PORTADA DE RADIO.jpg";
 import { ChatResponsive } from "@/app/(components)/ChatResponsive";
 import { SwipperRadio } from '@/app/(components)/SwipperRadio';
 
+
+import dynamic from "next/dynamic";
+
+const RadioInterno = dynamic(
+  () => {
+    return import("../../(components)/RadioInterna.jsx");
+  },
+  { ssr: false }
+);
+
 const Radio = () => {
 
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  // const [width, setWidth] = useState(window?.innerWidth);
+  // const [height, setHeight] = useState(window?.innerHeight);
 
-  useEffect(() => {
-    window?.addEventListener("resize", () => {
-      setWidth(window?.innerWidth);
-      setHeight(window?.innerHeight);
-    });
-    return () => {
-      window?.removeEventListener("resize", () => {
-        setWidth(window?.innerWidth);
-        setHeight(window?.innerHeight);
-      });
-    };
-  }, [])
+  // useEffect(() => {
+  //   window?.addEventListener("resize", () => {
+  //     setWidth(window?.innerWidth);
+  //     setHeight(window?.innerHeight);
+  //   });
+  //   return () => {
+  //     window?.removeEventListener("resize", () => {
+  //       setWidth(window?.innerWidth);
+  //       setHeight(window?.innerHeight);
+  //     });
+  //   };
+  // }, [])
 
 
   return (
-    <div className="relative montserrat  h-full z-20   w-full mx-auto 
-     ">
 
-      {
-        width < 760 ? (<SwipperRadio />) : (
-          <div className="h-full z-50 my-[50%] mx-auto md:mt-0 md:flex items-center justify-center gap-x-10 ">
+    <div><RadioInterno/></div>
+    // <div className="relative montserrat  h-full z-20   w-full mx-auto 
+    //  ">
 
-            <div
-              className=""
-            >
+    //   {
+    //     width < 760 ? (<SwipperRadio />) : (
+    //       <div className="h-full z-50 my-[50%] mx-auto md:mt-0 md:flex items-center justify-center gap-x-10 ">
 
-              <Radio2 />
+    //         <div
+    //           className=""
+    //         >
 
-            </div>
-            <div className=''>
-              <Providers>
+    //           <Radio2 />
 
-                <div className=''>
-                  <ChatResponsive />
-                </div>
-              </Providers>
-            </div>
+    //         </div>
+    //         <div className=''>
+    //           <Providers>
 
-
-            <div className="fixed inset-0 h-screen -z-10">
-              <div className="xl:bg-right xl:bg-no-repeat w-full opacity-70 bg-fondo h-full  translate-z-50 fixed  "></div>
-
-              <Image
-                src={Portada}
-                width={0}
-                height={0}
-                alt=""
-                className="w-full h-full object-fill"
-              />
+    //             <div className=''>
+    //               <ChatResponsive />
+    //             </div>
+    //           </Providers>
+    //         </div>
 
 
-            </div>
-          </div>
-        )
-      }
+    //         <div className="fixed inset-0 h-screen -z-10">
+    //           <div className="xl:bg-right xl:bg-no-repeat w-full opacity-70 bg-fondo h-full  translate-z-50 fixed  "></div>
+
+    //           <Image
+    //             src={Portada}
+    //             width={0}
+    //             height={0}
+    //             alt=""
+    //             className="w-full h-full object-fill"
+    //           />
+
+
+    //         </div>
+    //       </div>
+    //     )
+    //   }
 
 
 
 
 
 
-    </div>
+    // </div>
   );
 };
 

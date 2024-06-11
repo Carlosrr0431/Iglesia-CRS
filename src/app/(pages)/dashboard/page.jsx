@@ -79,7 +79,7 @@ const DashBoard = () => {
                 <><div role="button"
                   onClick={() => handleClick("Ofrenda")}
                   className={`flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900 gap-x-4 ${tipo == 'Ofrenda' ? 'font-bold' : ''}`}>
-                  <div claclassNamess="grid mr-6 place-items-center">
+                  <div className="grid mr-6 place-items-center">
                     <Image src={Ofrenda} alt="" width={0} height={0} className="w-6 h-6 mr-2  fill-black" />
                   </div>
                   Ofrendas
