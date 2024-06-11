@@ -131,9 +131,8 @@ export const ChatResponsive = () => {
 
 
     return (
-        <div className="h-[50vh] border-[2px] border-white md:h-[70vh] max-w-[600px] md:w-[700px] flex flex-col relative">
+        <div id='chat' className="h-[60vh] mb-20 mx-2 border-[2px] border-white md:h-[475px] max-w-[600px] md:w-[700px] md:mb-0 flex flex-col relative sm:mx-auto">
             <div className="bg-transparent flex-1 overflow-y-scroll">
-
 
                 <ul className="h-full text-start  overflow-x-hidden  " ref={divRef} >
                     {messages.map((message, index) => (
@@ -186,30 +185,17 @@ export const ChatResponsive = () => {
             </div>
             <div className="bg-trasparent px-4 py-2">
                 <div className="flex items-center">
-                    {/* <form action={async (formData) => {
-                        await postData(formData, session?.user?.name, session?.user?.email, session?.user?.image);
-                        formRef.current?.reset();
-                    }}
-                        ref={formRef} className="flex gap-x-2 xs:gap-x-4  shadow-sm w-full ">
-                        <input class="w-full border-[1px] outline-none border-gray-400 bg-transparent  py-1 px-2 mr-2 text-white" type="text"
-                            name="message"
-                            ref={inputChat}
-                            placeholder="Escribe tu mensaje..." onKeyUp={enterClick2}
 
-                            autoFocus />
-                        <button class=" text-white font-medium  rounded-full">
-                            <BsFillSendFill className="w-6 h-6 xs:w-8 xs:h-8 select-none rounded-lg  text-center align-middle font-sans text-xs font-bold uppercase text-white  transition-all hover:scale-110 hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-non" />
-                        </button>
-                    </form> */}
 
                     {
                         session?.user?.email == undefined ? (<Providers>
                             <button
-                                className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 hover:bg-blue-50  right-[20%] top-[30%] xs:right-[30%] xs:top-[30%] mx-auto xs:w-1/2">
-                                <div className="relative flex items-center space-x-8 justify-center " onClick={() => {
+                                className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 hover:bg-blue-50  right-[20%]  xs:right-[30%] mx-auto xs:w-1/2 bg-white/20 my-[60%] md:mt-[35%]">
+                                <div className="relative flex items-center space-x-8 justify-center " onClick={async () => {
 
 
-                                    signIn('google')
+                                    await signIn('google', { callbackUrl: '/radio' })
+
                                 }}>
                                     <Image src="https://www.svgrepo.com/show/475656/google-color.svg"
                                         className="absolute left-0 w-5" alt="google logo" width={0} height={0} />
@@ -229,7 +215,7 @@ export const ChatResponsive = () => {
                                     ref={inputChat}
                                     placeholder="Escribe tu mensaje..." onKeyUp={enterClick2}
 
-                                    autoFocus />
+                                />
                                 <button className=" text-white font-medium  rounded-full">
                                     <BsFillSendFill className="w-6 h-6 xs:w-8 xs:h-8 select-none rounded-lg  text-center align-middle font-sans text-xs font-bold uppercase text-white  transition-all hover:scale-110 hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-non" />
                                 </button>

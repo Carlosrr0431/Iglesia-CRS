@@ -203,12 +203,14 @@
   /* color de la barra de desplazamiento y ancho */
   *::-webkit-scrollbar {
     width: 10px;
+    visibility: hidden;
     /* scrollbar-color: white; */
   }
 
   *::-webkit-scrollbar-thumb {
     border-radius: 14px;
     background-color: rgb(102, 100, 100);
+    visibility: hidden;
   }
 
   /* Tamaño para scroll personalizado */
@@ -260,6 +262,19 @@
     height: 450px;
     position: absolute;
     cursor: pointer;
+  }
+
+  /* Botones del Swiper */
+  .swipperClass {
+    --swiper-pagination-color: #FFFF;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+    --swiper-pagination-bullet-inactive-color: #FFFF;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
   }
 
   .botonRetroceder {

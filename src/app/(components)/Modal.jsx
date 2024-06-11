@@ -46,7 +46,7 @@ const Modal = ({ setShowModal, nameCard }) => {
     return (
 
 
-        <div className={`fixed inset-0 bg-[#005B82] z-20 bg-opacity-100 backdrop-blur-sm flex items-center justify-center h-full w-full`}>
+        <div className={`fixed inset-0 bg-[#005B82]  bg-opacity-100 backdrop-blur-sm flex items-center justify-center h-full w-full z-30`}>
             <form onSubmit={handleSubmit} className="w-full md:w-1/2   p-6  rounded-[5px]">
 
                 <div>

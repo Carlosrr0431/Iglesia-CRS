@@ -11,6 +11,7 @@ export const AppWrapper = ({ children }) => {
 
   const inputEl = useRef(null);
   const bodyScroll = useRef(null);
+  const swiperRef = useRef()
   const [state, setState] = useState({
     inputEl: inputEl
   })
@@ -41,7 +42,8 @@ export const AppWrapper = ({ children }) => {
     isOpenBiblia,
     setIsOpenBiblia,
     isOpenLibro,
-    setIsOpenLibro
+    setIsOpenLibro,
+    swiperRef
   }
   return (
     <AppContext.Provider value={obj}>

@@ -23,20 +23,17 @@ const handler = NextAuth({
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       // await registrarUsuario( user.name, user.email)
-
       return true;
     },
 
-    async jwt( { token, user } ) {
-
-      if ( user?.email == "carlos.facundo.rr@gmail.com"){
-        token.role = "Admin"
+    async jwt({ token, user }) {
+      if (user?.email == "carlos.facundo.rr@gmail.com") {
+        token.role = "Admin";
       }
 
       return token;
-    }
+    },
   },
 });
 
 export { handler as GET, handler as POST };
-
