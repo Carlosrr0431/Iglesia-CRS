@@ -9,29 +9,25 @@ import Providers from '../../(providers)/Providers'
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-
-import { useAppContext } from "../../(context)/AppWrapper";
-
 import Portada from "../../public/IMAGEN PARA PORTADA DE RADIO.jpg";
 import { ChatResponsive } from "@/app/(components)/ChatResponsive";
 import { SwipperRadio } from '@/app/(components)/SwipperRadio';
-import { toast } from 'sonner';
 
 const Radio = () => {
 
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth] = useState(window?.innerWidth);
+  const [height, setHeight] = useState(window?.innerHeight);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window?.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window?.removeEventListener("resize", handleResize);
     };
   }, [])
 
   const handleResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+    setWidth(window?.innerWidth);
+    setHeight(window?.innerHeight);
   };
 
   console.log(width, height);

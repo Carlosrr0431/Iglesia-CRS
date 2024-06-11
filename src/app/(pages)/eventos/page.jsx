@@ -162,7 +162,7 @@ const Eventos = () => {
 
 
 
-            <div className="flex gap-x-4 xl:gap-x-12 mx-auto xl:mx-0 mb-4 my-[5%]">
+            <div className="flex gap-x-4  xl:gap-x-12 mx-4 xl:mx-0 mb-4 my-[5%]">
                 {aboutData.map((item, itemIndex) => {
                     return (
                         <div
@@ -170,7 +170,7 @@ const Eventos = () => {
                             key={itemIndex}
                             className={`${index == itemIndex &&
                                 "text-accent-[#ffffff] font-bold after:w-[100%] after:bg-white after:transition-all after:duration-300"
-                                }  cursor-pointer capitalize xl:text-2xl relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 montserrat after:left-0`}
+                                }  cursor-pointer capitalize xl:text-2xl text-start text-md relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 montserrat after:left-0`}
                         >
                             {item.title}
                         </div>
@@ -178,14 +178,14 @@ const Eventos = () => {
                 })}
             </div>
 
-            <div className="py-2 xl:py-6 xl:grid-cols-2 md:grid-cols-1    gap-y-2   grid  mb-16 xl:gap-y-4   gap-x-8 lg:mx-auto  ">
+            <div className="py-2 xl:py-6 xl:grid-cols-2 md:grid-cols-1    gap-y-2   grid  mb-16 xl:gap-y-4   gap-x-8 lg:mx-auto ">
                 {(contenido && index == 0) ? contenido.map((item, i) => {
                     return (
 
                         <div key={i} className='relative'>
                             <div
 
-                                className=" flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border  text-gray-700 shadow-md max-h-[400px]  mb-[100px]">
+                                className=" flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border  text-gray-700 shadow-md max-h-[400px]  mb-[100px] mx-4 ">
                                 <div class=" m-0 overflow-hidden text-gray-700 rounded-none shadow-none bg-clip-border  w-full h-full ">
                                     <Image
                                         src={item.imagenUrl}

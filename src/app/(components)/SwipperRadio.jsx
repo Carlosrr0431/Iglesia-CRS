@@ -26,7 +26,7 @@ export const SwipperRadio = () => {
 
     return (
         <div className='w-full h-full'>
-            <div class="flex divide-x divide-white items-center justify-center w-full p-4 row z-50">
+            <div className="flex divide-x divide-white items-center justify-center w-full p-4 row z-50">
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
                     className={`px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50 hover:bg-gray-900/10 active:bg-gray-900/20 ${swiper == 'Radio' ? 'font-extrabold text-2xl text-white' : 'text-gray-900'} `}
