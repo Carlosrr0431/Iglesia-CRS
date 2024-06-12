@@ -216,7 +216,7 @@ export const ChatResponsive = () => {
                                     placeholder="Escribe tu mensaje..." onKeyUp={enterClick2}
 
                                 />
-                                <button className=" text-white font-medium  rounded-full">
+                                <button type='submit' className=" text-white font-medium  rounded-full">
                                     <BsFillSendFill className="w-6 h-6 xs:w-8 xs:h-8 select-none rounded-lg  text-center align-middle font-sans text-xs font-bold uppercase text-white  transition-all hover:scale-110 hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-non" />
                                 </button>
                             </form>
