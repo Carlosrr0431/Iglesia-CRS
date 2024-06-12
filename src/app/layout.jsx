@@ -15,6 +15,7 @@ export const metadata = {
   title: "Iglesia CRS",
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
+  
 
 };
 
@@ -25,6 +26,7 @@ export const viewport = {
   userScalable: false,
   height: 'device-height',
   
+  
 }
 
 export default function RootLayout({ children }) {
@@ -32,12 +34,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es">
-      <body className="montserrat">
+      <body className="montserrat h-[100dvh]">
         <Nav />
         <Header />
 
         <main
-          className={`page h-[100dvh] text-white bg-cover bg-no-repeat font-sora`}
+          className={`page text-white bg-cover bg-no-repeat font-sora`}
         >
           <Providers>
             <AppWrapper>
