@@ -220,7 +220,7 @@ const Eventos = () => {
                         <div key={i} className='relative'>
                             <div
 
-                                className =" flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border  text-gray-700 shadow-md max-h-[400px]  mb-[100px]">
+                                className =" flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border  text-gray-700 shadow-md max-h-[400px]  mb-[100px] mx-4 ">
                                 <div className =" m-0 overflow-hidden text-gray-700 rounded-none shadow-none bg-clip-border  w-full h-full ">
                                     <Image
                                         src={item.imagenUrl}
@@ -233,7 +233,7 @@ const Eventos = () => {
                                 </div>
 
 
-                                <div className='absolute bottom-0 flex mx-[70px] rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
+                                <div className='absolute bottom-0 flex items-end content-center place-content-center justify-center rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
                                     <div className='flex flex-col justify-evenly p-4'>
                                         <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                             {item.titulo}

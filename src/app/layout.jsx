@@ -15,7 +15,7 @@ export const metadata = {
   title: "Iglesia CRS",
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
-  
+  keywords: ['Iglesia', "Iglesia Salta"]
 
 };
 

@@ -3,7 +3,7 @@
     "background_color": "#101010",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "http://localhost:3000/",
     "name": "Iglesia CRS",
     "short_name": "CRS",
     "description": "Iglesia Cristiana",
