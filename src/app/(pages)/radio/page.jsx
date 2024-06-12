@@ -32,7 +32,7 @@ const Radio = () => {
     <div className="relative montserrat  h-[100dvh] z-20   w-full mx-auto 
      ">
 
-      <div><RadioInterno /></div>
+      <div className='h-[100dvh]'><RadioInterno /></div>
 
     </div>
 
