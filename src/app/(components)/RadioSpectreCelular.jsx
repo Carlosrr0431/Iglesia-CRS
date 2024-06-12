@@ -81,10 +81,12 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
   };
 
 
-
   return (
-    
-    <div className="-mb-7">
+
+
+
+    <div className="-mb-7 z-120">
+
       <audio
         ref={audioRef}
         onPlay={handleAudioPlay}
@@ -93,7 +95,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
         crossorigin="anonymous"
       />
 
-      
+
       <canvas ref={canvasRef} width={210} height={80} />
     </div>
   );

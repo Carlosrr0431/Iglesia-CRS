@@ -12,6 +12,7 @@ import { SwipperRadio } from "./SwipperRadio";
 import Providers from "../(providers)/Providers";
 import { ChatResponsive } from "./ChatResponsive";
 
+import Radio2 from "../(components)/Radio.jsx"
 
 const Radio = () => {
 
@@ -38,13 +39,13 @@ const Radio = () => {
   
         {
           width < 760 ? (<SwipperRadio />) : (
-            <div className="h-full z-50 my-[50%] mx-auto md:mt-0 md:flex items-center justify-center gap-x-10 ">
+            <div className="h-full z-50  mx-auto md:mt-[80px] md:flex items-center justify-center gap-x-10 ">
   
               <div
                 className=""
               >
   
-                <Radio />
+                <Radio2 />
   
               </div>
               <div className=''>
