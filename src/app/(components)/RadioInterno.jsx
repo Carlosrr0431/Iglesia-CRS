@@ -34,12 +34,12 @@ const Radio = () => {
   
   
     return (
-      <div className="relative montserrat  h-full z-20   w-full mx-auto 
+      <div className="
        ">
   
         {
           width < 760 ? (<SwipperRadio />) : (
-            <div className="h-full z-50  mx-auto md:mt-[80px] md:flex items-center justify-center gap-x-10 ">
+            <div className="h-[100dvh] z-50  mx-auto  md:flex items-center justify-center gap-x-10 ">
   
               <div
                 className=""
