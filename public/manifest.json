@@ -3,7 +3,7 @@
     "background_color": "#101010",
     "display": "standalone",
     "scope": "/",
-    "start_url": "www.centroderestauracion.com.ar",
+    "start_url": "/",
     "name": "Iglesia CRS",
     "short_name": "CRS",
     "description": "Iglesia Centro de Restauración",

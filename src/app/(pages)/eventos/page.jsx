@@ -157,7 +157,7 @@ const Eventos = () => {
     return (
         <div
 
-            className="flex flex-col montserrat w-full xl:max-w-[100%] overflow-y-scroll h-full mx-auto items-center  bg-slate-800 relative "
+            className="flex flex-col montserrat w-full xl:max-w-[100%] overflow-y-scroll h-full mx-auto items-center  bg-slate-700 relative "
         >
 
 
