@@ -12,12 +12,23 @@ import BibliaNVI from "./(components)/BibliaNVI";
 import { BotonesFlotantes } from "./(components)/BotonesFlotantes";
 
 export const metadata = {
-  title: "Iglesia CRS",
+  title: {
+    default: "Iglesia CRS",
+    template: '%s - Iglesia Cristiana'
+  },
+
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
-  keywords: ['Iglesia', "Iglesia Salta"],
-  metadateBase: new URL("https://www.centroderestauracion.com.ar/")
+  keywords: ['Iglesia', 'Iglesia Salta', 'Iglesia Cristiana', 'Iglesia Evangelica', 'Centro de restauración', 'Orar', 'Culto', 'Lugar para orar'],
+  metadataBase: new URL("https://www.centroderestauracion.com.ar"),
 
+  openGraph: {
+    title: 'Iglesia Centro de Restauración Salta',
+    description: 'Ven a adorar al Rey y a compartir en familia',
+    url: 'https://www.centroderestauracion.com.ar',
+    siteName: 'Iglesia CRS',
+    type: 'website',
+  },
 };
 
 export const viewport = {
@@ -26,8 +37,8 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
   height: 'device-height',
-  
-  
+
+
 }
 
 export default function RootLayout({ children }) {
