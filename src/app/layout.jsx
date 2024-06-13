@@ -10,6 +10,7 @@ import Providers from "./(providers)/Providers";
 import { Toaster } from "sonner";
 import BibliaNVI from "./(components)/BibliaNVI";
 import { BotonesFlotantes } from "./(components)/BotonesFlotantes";
+import Head from "next/head";
 
 export const metadata = {
   title: {
@@ -20,14 +21,38 @@ export const metadata = {
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
   keywords: ['Iglesia', 'Iglesia Salta', 'Iglesia Cristiana', 'Iglesia Evangelica', 'Centro de restauración', 'Orar', 'Culto', 'Lugar para orar'],
-  metadataBase: new URL("https://www.centroderestauracion.com.ar"),
-
+  metadataBase: new URL('https://www.centroderestauracion.com.ar/'),
   openGraph: {
     title: 'Iglesia Centro de Restauración Salta',
     description: 'Ven a adorar al Rey y a compartir en familia',
-    url: 'https://www.centroderestauracion.com.ar',
     siteName: 'Iglesia CRS',
+    // url: 'https://d0jvt1bv-3000.brs.devtunnels.ms/',
     type: 'website',
+    images: [
+      {
+        
+        url: "https://www.centroderestauracion.com.ar/api/og",
+        width: 256,
+        height: 256,
+        itemprop: 'image'
+      },
+      {
+
+        
+        url: "https://www.centroderestauracion.com.ar/api/og",
+        width: 600,
+        height: 336,
+        itemprop: 'image'
+      },
+      {
+        url: "https://www.centroderestauracion.com.ar/api/og",
+        width: 1200,
+        height: 630,
+        itemprop: 'image'
+      },
+
+
+    ],
   },
 };
 

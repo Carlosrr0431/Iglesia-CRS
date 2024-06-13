@@ -49,17 +49,32 @@ export async function postData(formData, userName, email, img) {
 }
 
 export async function sendForm(formData) {
+  const cookieStore = cookies();
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    {
+      cookies: () => cookieStore,
+    }
+  );
+
   const nombre = formData.get("name");
   const telefono = formData.get("phone");
   const motivo = formData.get("mensaje");
 
-  connectToDB();
+  const result2 = await supabase
+    .from("oraciones")
+    .insert({
+      nombre: nombre,
+      telefono: telefono,
+      mensaje: motivo,
+    })
+    .single();
 
-  const pedidoOracion = Oracion.create({
-    nombre: nombre,
-    telefono: telefono,
-    motivo: motivo,
-  });
+
+    
+  return { message: "Success" };
 }
 
 export async function actualizarDatos(formData, idEvento, tipo) {
@@ -193,21 +208,6 @@ export const registrarUsuario = async (nombre, email) => {
     const data = JSON.parse(JSON.stringify(newUser));
     console.log(data);
     return data;
-    // const user = await User.findOne({ email: email });
-
-    // if (!user) {
-    //   const newUser = await User.create({
-    //     nombre: nombre,
-    //     email: email,
-    //     permisoChat: true,
-    //   });
-
-    //   const data = JSON.parse(JSON.stringify(newUser));
-    //   console.log(data);
-    //   return data;
-    // }
-
-    // return null;
   } catch (error) {
     console.log(error);
   }
@@ -223,22 +223,17 @@ export async function donate(formData) {
           quantity: 1,
           unit_price: Number(formData.get("monto")),
         },
-
-        
       ],
 
-      
       back_urls: {
         success: "https://tn.com.ar/",
         failure: "https://tn.com.ar/",
         pending: "https://tn.com.ar/",
       },
-      
-    auto_return: "approved",
-    notification_url: "https://iglesia-crs-qx4l.vercel.app/api/webhook",
-    },
 
-  
+      auto_return: "approved",
+      notification_url: "https://iglesia-crs-qx4l.vercel.app/api/webhook",
+    },
   });
 
   redirect(preference.init_point);

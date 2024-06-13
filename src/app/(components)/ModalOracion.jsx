@@ -8,9 +8,10 @@ import React, { useState, useRef } from "react";
 import { initMercadoPago } from "@mercadopago/sdk-react";
 
 import { useRouter } from 'next/navigation'
-
+import Cancel from '../public/cancel.svg'
 import { Toaster, toast } from 'sonner'
 import { sendForm } from "../action.js";
+import Image from "next/image.js";
 
 
 const ModalOracion = ({ setShowModal }) => {
@@ -25,7 +26,12 @@ const ModalOracion = ({ setShowModal }) => {
              flex items-center justify-center h-full w-full 
              `}>
             <div className="rounded-[10px] shadow-2xl bg-white/20 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto">
-                <h1 className="block w-full text-center text-grey-darkest mb-6">Pedir oración</h1>
+                <div className="flex">
+                    <h1 className=" w-full text-center text-grey-darkest mb-6">Pedir oración</h1>
+                    <div className="" onClick={() => setShowModal(false)}>
+                        <Image src={Cancel} height={40} width={40} alt="" className="" />
+                    </div>
+                </div>
                 <form className="mb-4 md:flex  md:flex-wrap md:justify-between" action={(formData) => sendForm(formData)} onSubmit={() => setShowModal(false)}>
                     <div className="flex flex-col mb-4 md:w-1/2">
                         {/* <label class="mb-2 uppercase tracking-wide text-lg text-grey-darkest" for="first_name">Nombre y Apellido</label> */}

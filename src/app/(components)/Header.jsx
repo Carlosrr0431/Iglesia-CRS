@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className={`${pathname == '/semilla' || pathname == '/iglesia' || pathname == '/radio' || pathname == '/dashboard' || pathname == '/eventos' ? 'hidden' : 'block'} absolute z-50  w-full flex items-center px-16 xl:px-0 xl:ml-16 xl:h-[100px]`}>
+      <header className={`${pathname == '/semilla' || pathname == '/iglesia' || pathname == '/radio' || pathname == '/dashboard' || pathname == '/ubicacion' || pathname == '/eventos' ? 'hidden' : 'block'} absolute z-50  w-full flex items-center px-16 xl:px-0 xl:ml-16 xl:h-[100px]`}>
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-y-8 py-8">
             <div className="order-2 lg:order-1" >

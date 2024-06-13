@@ -14,19 +14,19 @@ import Image from 'next/image.js';
 import CardSemilla from '@/app/(components)/CardSemilla';
 
 const cardData = [
-  { name: "Ofrenda", icon: Ofrenda, colorGradient: ["from-[#93A821]", "to-[#C4D63E]"] },
-  { name: "Diezmo", icon: Diezmo, colorGradient: ["from-[#690777]", "to-[#C102D1]"] },
-  { name: "Primicia", icon: Primicia, colorGradient: ["from-[#B28516]", "to-[#E5C851]"] },
-  { name: "Donar", icon: Donar, colorGradient: ["from-[#005F84]", "to-[#39C2FF]"] },
+  { name: "Ofrenda", icon: Ofrenda, colorText: ["text-[#A3993A]"], bgFondo: 'bg-[#A3993A]' },
+  { name: "Diezmo", icon: Diezmo, colorText: ["text-[#8D4291]"], bgFondo: 'bg-[#8D4291]' },
+  { name: "Primicia", icon: Primicia, colorText: ["text-[#D28952]"], bgFondo: 'bg-[#D28952]' },
+  { name: "Donar", icon: Donar, colorText: ["text-[#F9354C]"], bgFondo: 'bg-[#F9354C]' },
 
 ];
 
 const Semilla = () => {
   return (
-    <div className="relative montserrat w-full h-full  overflow-y-scroll overflow-x-hidden" >
+    <div className="relative montserrat w-full h-full  overflow-y-scroll overflow-x-hidden " >
 
       <h2 className="text-2xl  relative left-[13%] top-[10%]  lg:top-[17%] xl:top-[25%]">Elíge una opción:</h2>
-      <div className="w-full h-full  flex flex-col gap-y-8  lg:space-x-8  items-center justify-center mt-36 lg:mt-0  overflow-y-auto xs:place-items-center   lg:mx-[0%]   lg:pb-0 xs:grid xs:grid-cols-2 xs:mr-[2%] xs:mt-0 xs:items-center xs:gap-y-14 xs:content-center lg:flex lg:flex-row mb-[90px] xs:mb-0">
+      <div className="w-full h-full  flex flex-col gap-y-12  lg:space-x-8  items-center justify-center mt-36 lg:mt-0  overflow-y-auto xs:place-items-center   lg:mx-[0%]   lg:pb-0 xs:grid xs:grid-cols-2 xs:mr-[2%] xs:mt-0 xs:items-center xs:gap-y-14 xs:content-center lg:flex lg:flex-row mb-[150px] xs:mb-0">
 
         {cardData.map((card, index) => (
           <CardSemilla card={card} key={index} />
