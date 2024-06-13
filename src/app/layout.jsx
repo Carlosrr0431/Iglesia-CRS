@@ -20,7 +20,7 @@ export const metadata = {
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
   keywords: ['Iglesia', 'Iglesia Salta', 'Iglesia Cristiana', 'Iglesia Evangelica', 'Centro de restauración', 'Orar', 'Culto', 'Lugar para orar'],
-  metadataBase: new URL('https://d0jvt1bv-3001.brs.devtunnels.ms/'),
+  metadataBase: new URL('https://www.centroderestauracion.com.ar/'),
   openGraph: {
     title: 'Iglesia Centro de Restauración Salta',
     description: 'Ven a adorar al Rey y a compartir en familia',
@@ -30,7 +30,7 @@ export const metadata = {
     images: [
       {
         
-        url: "https://d0jvt1bv-3001.brs.devtunnels.ms/api/og",
+        url: "https://www.centroderestauracion.com.ar/api/og?img=1",
         width: 256,
         height: 256,
         itemprop: 'image'
@@ -38,13 +38,13 @@ export const metadata = {
       {
 
         
-        url: "https://d0jvt1bv-3001.brs.devtunnels.ms/api/og",
+        url: "https://www.centroderestauracion.com.ar/api/og?img=2",
         width: 600,
         height: 336,
         itemprop: 'image'
       },
       {
-        url: "https://d0jvt1bv-3001.brs.devtunnels.ms/api/og",
+        url: "https://www.centroderestauracion.com.ar/api/og?img=3",
         width: 1200,
         height: 630,
         itemprop: 'image'

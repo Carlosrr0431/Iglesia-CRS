@@ -94,7 +94,7 @@ const BibliaNVI = () => {
 
             {
                 isOpenBiblia &&
-                <div className='fixed inset-0 bg-white z-50 bg-opacity-75 backdrop-blur-sm flex  h-[80%] sm:w-[50%]  w-[80%] mx-auto sm:mx-[25%] my-[5%] flex-col space-y-2 '>
+                <div className='fixed  inset-0 bg-white z-50 bg-opacity-75 backdrop-blur-sm flex  h-[80%] sm:w-[50%]  w-[80%] mx-auto sm:mx-[25%] my-[5%] flex-col space-y-2 '>
                     <div className='flex justify-center gap-x-2 md:gap-x-8 mt-10'>
                         <button
                             type="button"

@@ -27,7 +27,7 @@ const Biblia = () => {
         setIsOpenBiblia(!isOpenBiblia)
     }
     return (
-        <div className={`${pathname == '/dashboard' ? 'hidden' : 'block'}`}>
+        <div className={`${pathname == '/dashboard' ? 'hidden' : 'block'} `}>
             <button onClick={handleBiblia }>
                 <Image
                     src={BibliaIcon}
