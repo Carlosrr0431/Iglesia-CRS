@@ -25,7 +25,7 @@ export const metadata = {
     title: 'Iglesia Centro de Restauración Salta',
     description: 'Ven a adorar al Rey y a compartir en familia',
     siteName: 'Iglesia CRS',
-    // url: 'https://d0jvt1bv-3000.brs.devtunnels.ms/',
+    url: 'https://www.centroderestauracion.com.ar/',
     type: 'website',
     images: [
       {
