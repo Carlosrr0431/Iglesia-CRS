@@ -65,7 +65,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
         canvasRef.current.height
       );
       gradient?.addColorStop(0.2, "#00E5B9");
-      gradient?.addColorStop(1, "#d633b3");
+      gradient?.addColorStop(1, "#00E5B9");
 
 
       if (ctx) {
@@ -85,7 +85,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
 
 
 
-    <div className="-mb-7 z-120">
+    <div className="-mb-5 z-120">
 
       <audio
         ref={audioRef}
@@ -96,7 +96,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
       />
 
 
-      <canvas ref={canvasRef} width={210} height={80} />
+      <canvas ref={canvasRef} width={260} height={80} />
     </div>
   );
 };

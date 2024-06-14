@@ -20,6 +20,7 @@ export const AppWrapper = ({ children }) => {
     bodyScroll: bodyScroll
   })
   const [userName, setUserName] = useState("")
+  const [swiper, setSwiper] = useState("Radio")
   const [disabled, setDisabled] = useState(false)
   const [ isOpenCapitulo, setIsOpenCapitulo ] = useState(false)
   const [ isOpenVersiculo, setIsOpenVersiculo ] = useState(false)
@@ -43,7 +44,9 @@ export const AppWrapper = ({ children }) => {
     setIsOpenBiblia,
     isOpenLibro,
     setIsOpenLibro,
-    swiperRef
+    swiperRef,
+    swiper,
+    setSwiper
   }
   return (
     <AppContext.Provider value={obj}>

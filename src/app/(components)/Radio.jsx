@@ -10,8 +10,12 @@ import { FaFastForward } from "react-icons/fa";
 import { FaVolumeMute } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
 import { FaVolumeDown } from "react-icons/fa";
-import RadioIcon from '../public/Logo radio online.svg'
+import RadioIcon from '../public/logo crs.svg'
 
+import { BsPlayCircleFill } from "react-icons/bs";
+import { IoPlaySkipBackSharp } from "react-icons/io5";
+import { IoPlaySkipForward } from "react-icons/io5";
+import { IoPauseCircle } from "react-icons/io5";
 
 import { useAppContext } from "../(context)/AppWrapper.jsx";
 import { RadioSpectre } from "./RadioSpectre.jsx";
@@ -29,7 +33,7 @@ const Radio = () => {
   const [controlVolumen, setControlVolumen] = useState(true);
   const [volumenAct, setVolumenAct] = useState(0)
   const [controlVolumenAdelantar, setControlVolumenAdelantar] = useState(true);
-  const { inputEl } = useAppContext();
+  const { inputEl, swiperRef, swiper } = useAppContext();
 
   useEffect(() => {
     // inputEl.current.volume = 1
@@ -97,7 +101,9 @@ const Radio = () => {
     <div
 
     >
-      <div className="mb-[70px] md:mb-0 -mt-8 md:mt-0 items-center  mx-auto w-[85%] h-[480px]  xs:w-[280px]  flex flex-col justify-around bg-white/70 ">
+      <div className=" md:mb-0 -mt-[100px]  items-center  mx-auto w-full h-screen  xs:w-[280px]  flex flex-col justify-center gap-y-8 ">
+
+       
         {/* mt-8 items-center -space-y-2 text-center flex flex-col justify-center */}
         <div className="  justify-center items-center flex flex-col text-center  flex-nowrap">
           <div className="">
@@ -122,7 +128,7 @@ const Radio = () => {
           <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
         </div>
 
-        <div className="  text-[#414040]  font-normal text-sm mt-2">
+        <div className="  text-white  monstserrat text-[17px]">
           ESCUCHARTE ME HACE BIEN
         </div>
 
@@ -131,18 +137,18 @@ const Radio = () => {
           <button onClick={handledBotonVolumen}>
             {controlVolumen ? (
               controlVolumenAdelantar ? (
-                <FaVolumeDown className="text-black/40 h-4 w-4 mr-1" />
+                <FaVolumeDown className="text-white h-4 w-4 mr-1" />
               ) : (
-                <FaVolumeUp className="text-black/40 h-4 w-4 mr-1" />
+                <FaVolumeUp className="text-white h-4 w-4 mr-1" />
               )
             ) : (
-              <FaVolumeMute className="text-black/40 h-4 w-4 mr-1" />
+              <FaVolumeMute className="text-white h-4 w-4 mr-1" />
             )}
           </button>
           <div className="w-full  rounded-full  -translate-y-1.5">
             <input
               type="range"
-              className="w-[170px]    accent-[#636363]  h-0.5 rounded-lg"
+              className="w-[250px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
               min="0"
               max="100"
               ref={inputVolumen}
@@ -151,46 +157,46 @@ const Radio = () => {
           </div>
         </div>
 
-        <div className="flex gap-x-10 mb-4 ">
+        <div className="flex justify-center items-center gap-x-10  ">
           <button
             onClick={retroceder}
             onPointerEnter={() => setBotonAtras(true)}
             onMouseLeave={() => setBotonAtras(false)}
-            className="fontCelular shadow-lg  shadow-black/50 transform hover:shadow-none transition-shadow "
+            className=""
 
           >
-            <FaFastBackward
-              className="mx-auto"
-              color={`${botonAtras ? "#585858" : "#6e6e6e"}`}
+            <IoPlaySkipBackSharp
+              className="mx-auto w-[35px] h-[35px] text-white fill-white"
+              color={`${botonAtras ? "#FFFFF" : "#FFFFF"}`}
             />
           </button>
           <button
             onPointerEnter={() => setBotonPlayPause(true)}
             onMouseLeave={() => setBotonPlayPause(false)}
             onClick={control ? playMusic : pauseMusic}
-            className="fontCelular shadow-lg  shadow-black/50 transform hover:shadow-none transition-shadow"
+            className=""
           >
             {control ? (
-              <FaPlay
-                className="mx-auto"
-                color={`${botonPlayPause ? "#585858" : "#6e6e6e"}`}
+              <BsPlayCircleFill
+                className="mx-auto w-[50px] h-[50px]"
+                color={`${botonPlayPause ? "#FFFFF" : "#FFFFF"}`}
               />
             ) : (
-              <FaPause
-                className="mx-auto"
-                color={`${botonPlayPause ? "#585858" : "#6e6e6e"}`}
+              <IoPauseCircle
+                className="mx-auto w-[50px] h-[50px]"
+                color={`${botonPlayPause ? "#FFFFF" : "#FFFFF"}`}
               />
             )}
           </button>
           <button
             onPointerEnter={() => setBotonAdelantar(true)}
             onMouseLeave={() => setBotonAdelantar(false)}
-            className="fontCelular shadow-lg  shadow-black/50 transform hover:shadow-none transition-shadow"
+            className=""
             onClick={avanzar}
           >
-            <FaFastForward
-              className="mx-auto"
-              color={`${botonAdelantar ? "#585858" : "#6e6e6e"}`}
+            <IoPlaySkipForward
+              className="mx-auto w-[35px] h-[35px] text-white fill-white"
+              color={`${botonAdelantar ? "#FFFFF" : "#FFFFF"}`}
             />
           </button>
         </div>

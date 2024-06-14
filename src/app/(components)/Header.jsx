@@ -23,12 +23,12 @@ const Header = () => {
               <Link href="/" >
                 <Image
                   src={Logo}
-                  width={80}
-                  height={40}
+                  width={90}
+                  height={50}
                   alt=""
                   priority={true}
 
-                  className={`mt-7 lg:mt-14 mr-19`}
+                  className={`mt-7 lg:mt-14 lg:right-[130px] relative mr-19`}
                 />
               </Link>
             </div>

@@ -63,8 +63,8 @@ const Nav = () => {
               </div>
 
               <div className="flex  flex-col justify-center items-center gap-y-1" >
-                <Image src={link.icon} width={0} height={0} alt="" className={`${link.name == 'Mi Semilla' ? 'xl:mb-0' : 'xl:mb-2'} max-w-[25px] max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85]`} />
-                <p className="text-[11px] text-center font-bold xl:hidden block">{link.name}</p>
+                <Image src={link.icon} width={0} height={0} alt="" className={`${link.name == 'Mi Semilla' ? 'xl:mb-0' : 'xl:mb-2'} max-w-[25px]  max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] ${link.name == 'Eventos' || link.name == 'Ubicacion' ? 'max-w-[22px] max-h-[22px]  ' : ''} `} />
+                <p className="text-[11px] text-center  font-bold xl:hidden block">{link.name}</p>
               </div>
 
 

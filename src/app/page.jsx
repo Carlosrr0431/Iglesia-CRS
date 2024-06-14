@@ -19,13 +19,13 @@ const Home = () => {
         <div className={`${showModal ? 'hidden' : 'block'} text-center montserrat flex   flex-col justify-center xl:mx-auto w-full items-center  xl:text-center h-full container`}>
           <h1
 
-            className="h2 z-20  font-bold mx-auto items-center text-center  tracking-[10px]"
+            className="h2 z-20  font-bold mx-auto items-center text-center  tracking-[5px]"
           >
             ¡BIENVENIDO! <br />
             <span className="font-normal tracking-[0px]"> Un lugar para adorar al</span> <span>REY</span>
           </h1>
 
-          <button onClick={() => setShowModal(true)} className="bg-transparent text-black/70 z-20 hover:bg-black/90  font-semibold hover:text-white py-2 px-4 bg-white  hover:border-transparent rounded">
+          <button onClick={() => setShowModal(true)} className="bg-transparent text-black/70 z-20 hover:bg-black/90  font-semibold hover:text-white py-2 px-4 bg-white  hover:border-transparent rounded" >
             PEDIR ORACION
           </button>
 
@@ -47,7 +47,7 @@ const Home = () => {
           width={0}
           height={0}
           alt=""
-          className="w-full  h-full absolute z-20 inset-0 object-cover" />
+          className="w-full  h-full absolute z-20 inset-0 object-cover mix-blend-multiply" />
 
       </div>
 

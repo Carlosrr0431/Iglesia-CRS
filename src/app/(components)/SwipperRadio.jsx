@@ -21,27 +21,26 @@ import { useAppContext } from '../(context)/AppWrapper';
 
 export const SwipperRadio = () => {
 
-    const [swiper, setSwiper] = useState("Radio")
-    const { swiperRef } = useAppContext();
+    const { swiperRef, setSwiper, swiper } = useAppContext();
 
     return (
-        <div className='w-full h-full'>
-            <div className="flex divide-x divide-white items-center justify-center w-full p-4 row z-50">
+        <div className='w-full h-full bg-blue-800 mix-blend-multiply  '>
+
+            <div className="flex md:hidden  items-center justify-center w-full  row z-50">
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
-                    className={`px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50 hover:bg-gray-900/10 active:bg-gray-900/20 ${swiper == 'Radio' ? 'font-extrabold text-2xl text-white' : 'text-gray-900'} `}
+                    className={`px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50  ${swiper == 'Radio' ? 'font-extrabold text-2xl text-white ' : 'text-gray-900'} `}
                     type="button">
-                    Radio
+                    Radio online
                 </button>
                 <button
                     onClick={() => swiperRef.current?.slideNext()}
-                    className={`px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50 hover:bg-gray-900/10 active:bg-gray-900/20 ${swiper == 'Chat' ? 'font-extrabold text-2xl text-white' : 'text-gray-900'}`}
+                    className={`px-6 py-3 font-sans text-xs font-bold text-center  uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50   ${swiper == 'Chat' ? 'font-extrabold text-2xl text-white' : 'text-gray-900'}`}
                     type="button">
-                    Chat
+                    Chat en vivo
                 </button>
 
             </div>
-
             <Swiper
 
                 onBeforeInit={(swiper) => {
@@ -51,11 +50,8 @@ export const SwipperRadio = () => {
 
 
                 }}
-                spaceBetween={50} slidesPerView={1}
+                spaceBetween={0} slidesPerView={1}
 
-                pagination={{
-                    clickable: true,
-                }}
 
                 onActiveIndexChange={(e) => {
 
@@ -66,8 +62,8 @@ export const SwipperRadio = () => {
                     }
 
                 }}
-                modules={[Pagination]}
-                className="my-[50px] swipperClass"
+                modules={[]}
+                className="swipperClass"
 
             >
 
@@ -83,7 +79,7 @@ export const SwipperRadio = () => {
                     </Providers>
                 </SwiperSlide>
 
-                <div className="fixed inset-0 h-screen -z-10">
+                {/* <div className="fixed inset-0 h-screen -z-10">
                     <div className="xl:bg-right xl:bg-no-repeat w-full opacity-70 bg-fondo h-full  translate-z-50 fixed  "></div>
 
                     <Image
@@ -93,7 +89,7 @@ export const SwipperRadio = () => {
                         alt=""
                         className="w-full h-full object-fill"
                     />
-                </div>
+                </div> */}
 
             </Swiper>
         </div>

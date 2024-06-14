@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Cancel from '../public/cancel.svg'
 import Image from "next/image";
 
-const Modal = ({ setShowModal, nameCard }) => {
+const Modal = ({ setShowModal, nameCard, card }) => {
 
 
     const router = useRouter()
@@ -50,11 +50,13 @@ const Modal = ({ setShowModal, nameCard }) => {
         <div className={`fixed inset-0  z-50  bg-opacity-100 backdrop-blur-sm
             flex items-center justify-center h-full w-full  
             `}>
-            <div className="rounded-[10px] shadow-2xl bg-black/40 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto ">
-                {/* <h1 className="block w-full text-center text-grey-darkest mb-6">{nameCard}</h1> */}
-                {/* onSubmit={handleSubmit} */}
-                <div className="w-full flex justify-end" onClick={() => setShowModal(false)}>
-                    <Image src={Cancel} height={40} width={40} alt="" className="" />
+            <div className={`rounded-[10px] ${card.bgFondo} shadow-2xl  shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto`}>
+                <div className="flex justify-center">
+                    <h1 className="w-full text-center items-center text-grey-darkest ">{nameCard}</h1>
+
+                    <div className="" onClick={() => setShowModal(false)}>
+                        <Image src={Cancel} height={40} width={40} alt="" className="" />
+                    </div>
                 </div>
                 <form onSubmit={handleSubmit} className="mb-4 py-4 md:flex  md:flex-wrap md:justify-between" >
                     <div className="flex flex-col mb-4 md:w-1/2">

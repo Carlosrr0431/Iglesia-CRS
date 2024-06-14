@@ -131,7 +131,7 @@ export const ChatResponsive = () => {
 
 
     return (
-        <div id='chat' className="h-[60vh] mb-20 mx-2 border-[2px] border-white md:h-[475px] max-w-[600px] md:w-[700px] md:mb-0 flex flex-col relative sm:mx-auto">
+        <div id='chat' className="h-screen mb-20 mx-2  md:h-[475px] max-w-[600px] md:w-[700px] md:mb-0 flex flex-col relative sm:mx-auto md:border-[2px] md:border-white">
             <div className="bg-transparent flex-1 overflow-y-scroll">
 
                 <ul className="h-full text-start  overflow-x-hidden  " ref={divRef} >
@@ -190,7 +190,7 @@ export const ChatResponsive = () => {
                     {
                         session?.user?.email == undefined ? (<Providers>
                             <button
-                                className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 hover:bg-blue-50  right-[20%]  xs:right-[30%] mx-auto xs:w-1/2 bg-white/20 my-[60%] md:mt-[35%]">
+                                className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 hover:bg-blue-50  right-[20%]  xs:right-[30%] mx-auto xs:w-1/2 bg-white/20 mb-[400px] md:mt-[35%]">
                                 <div className="relative flex items-center space-x-8 justify-center " onClick={async () => {
 
 
@@ -209,7 +209,7 @@ export const ChatResponsive = () => {
                                 await postData(formData, session?.user?.name, session?.user?.email, session?.user?.image);
                                 formRef.current?.reset();
                             }}
-                                ref={formRef} className="flex gap-x-2 xs:gap-x-4  shadow-sm w-full ">
+                                ref={formRef} className="flex gap-x-2 mb-[160px] md:mb-0 xs:gap-x-4  shadow-sm w-full ">
                                 <input className="w-full border-[1px] outline-none border-gray-400 bg-transparent  py-1 px-2 mr-2 text-white" type="text"
                                     name="message"
                                     ref={inputChat}

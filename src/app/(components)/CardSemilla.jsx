@@ -48,8 +48,8 @@ const CardSemilla = ({ card }) => {
           className=""
           src={card.icon}
           alt=""
-          width={card.name == 'Primicia' ? 40 : 60}
-          height={card.name == 'Primicia' ? 40 : 60}
+          width={card.name == 'Primicia' ? 50 : 70}
+          height={card.name == 'Primicia' ? 50 : 70}
         />
 
       </div>
@@ -72,7 +72,7 @@ const CardSemilla = ({ card }) => {
 
 
       {
-        showModal && <Modal showModal={showModal} setShowModal={() => setShowModal(false)} nameCard={card.name} />
+        showModal && <Modal showModal={showModal} card = {card} setShowModal={() => setShowModal(false)} nameCard={card.name} />
       }
 
     </div>
