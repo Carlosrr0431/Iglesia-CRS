@@ -101,7 +101,7 @@ const Radio = () => {
     <div
 
     >
-      <div className=" md:mb-0 -mt-[100px]  items-center  mx-auto w-full h-screen  xs:w-[280px]  flex flex-col justify-center gap-y-8 ">
+      <div className=" md:mb-0 -mt-[100px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[320px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
 
        
         {/* mt-8 items-center -space-y-2 text-center flex flex-col justify-center */}

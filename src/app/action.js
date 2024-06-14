@@ -14,6 +14,7 @@ import { NextResponse } from "next/server";
 
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
+import { toast } from "sonner";
 
 const client = new MercadoPagoConfig({
   accessToken: process.env.MERCADO_PAGO_ACCESS_TOKEN,
@@ -72,9 +73,13 @@ export async function sendForm(formData) {
     })
     .single();
 
+  
 
-    
-  return { message: "Success" };
+  return {
+    errores: {
+      text: !motivo ? "El texto es requerido" : undefined,
+    },
+  };
 }
 
 export async function actualizarDatos(formData, idEvento, tipo) {

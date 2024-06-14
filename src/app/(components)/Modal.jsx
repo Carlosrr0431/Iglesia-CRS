@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Modal = ({ setShowModal, nameCard, card }) => {
 
-
+    
     const router = useRouter()
 
     const handleSubmit = async (e) => {
@@ -61,17 +61,18 @@ const Modal = ({ setShowModal, nameCard, card }) => {
                 <form onSubmit={handleSubmit} className="mb-4 py-4 md:flex  md:flex-wrap md:justify-between" >
                     <div className="flex flex-col mb-4 md:w-1/2">
                         {/* <label class="mb-2 uppercase tracking-wide text-lg text-grey-darkest" for="first_name">Nombre y Apellido</label> */}
-                        <input className="border py-2 px-3 text-grey-darkest md:mr-2 focus:outline-none focus:bg-white/90 text-black text-lg focus:text-black rounded-[5px]" type="text" name="name" id="name" placeholder="Nombre y Apellido" />
+                        <input required className="border py-2 px-3 text-grey-darkest md:mr-2 focus:outline-none focus:bg-white/90 text-black text-lg focus:text-black rounded-[5px]" type="text" name="name" id="name" placeholder="Nombre y Apellido" />
                     </div>
                     <div className="flex flex-col mb-4 md:w-1/2">
                         {/* <label class="mb-2 uppercase  text-lg text-grey-darkest md:ml-2" for="last_name">Número de celular</label> */}
-                        <input className="border text-lg py-2 px-3 text-grey-darkest md:ml-2 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]" type="number" name="monto" id="monto" placeholder="$ Monto" />
+                        <input required className="border text-lg py-2 px-3 text-grey-darkest md:ml-2 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]" type="number" name="monto" id="monto" placeholder="$ Monto" />
                     </div>
                     <div className="flex flex-col mb-4 md:w-full">
                         <textarea
                             placeholder="Dejanos un mensaje..."
                             rows="4" id="mensaje"
                             name="mensaje"
+                            required
                             className="px-3 py-2 bg-white text-lg border-gray-900 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
                         ></textarea>
                     </div>
