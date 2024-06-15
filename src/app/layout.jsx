@@ -5,6 +5,7 @@ import Nav from "./(components)/Nav";
 import Header from "./(components)/Header";
 import { AppWrapper } from "./(context)/AppWrapper";
 
+import { Analytics } from '@vercel/analytics/react';
 
 import Providers from "./(providers)/Providers";
 import { Toaster } from "sonner";
@@ -84,6 +85,7 @@ export default function RootLayout({ children }) {
               <Toaster position="bottom-center" richColors />
 
               <BotonesFlotantes />
+              <Analytics />
             </AppWrapper>
           </Providers>
         </main>
