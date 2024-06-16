@@ -45,7 +45,7 @@ const Radio = () => {
               className=""
             >
 
-              <Radio2 />
+              <Radio2 ancho = {width} />
 
             </div>
             <div className=''>

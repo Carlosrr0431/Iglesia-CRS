@@ -4,7 +4,7 @@ import { useAppContext } from "../(context)/AppWrapper";
 
 let animationController;
 
-export const RadioSpectreCelular = ({ url, ancho, largo }) => {
+export const RadioSpectreCelular = ({ url, ancho }) => {
   const { inputEl } = useAppContext();
   const canvasRef = useRef();
   const audioRef = inputEl;
@@ -96,7 +96,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
       />
 
 
-      <canvas ref={canvasRef} width={220} height={80} />
+      <canvas ref={canvasRef} width={ ancho < 700 ? 270 : 220} height={80} />
     </div>
   );
 };

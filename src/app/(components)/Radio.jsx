@@ -21,7 +21,7 @@ import { useAppContext } from "../(context)/AppWrapper.jsx";
 import { RadioSpectre } from "./RadioSpectre.jsx";
 import { RadioSpectreCelular } from "./RadioSpectreCelular";
 
-const Radio = () => {
+const Radio = ({ancho}) => {
 
   const [control, setControl] = useState(true);
   const [count, setCount] = useState(0);
@@ -125,10 +125,10 @@ const Radio = () => {
         {/* <RadioSpectre url="https://server.radiostreaming.com.ar/8738/stream " /> */}
 
         <div className="visible z-20">
-          <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
+          <RadioSpectreCelular ancho = {ancho} url="https://server.radiostreaming.com.ar/8738/stream " />
         </div>
 
-        <div className="  text-white  monstserrat text-[14px]">
+        <div className="  text-white  monstserrat text-[17px] mb:text-[14px]">
           ESCUCHARTE ME HACE BIEN
         </div>
 
@@ -148,7 +148,7 @@ const Radio = () => {
           <div className="w-full  rounded-full  -translate-y-1.5">
             <input
               type="range"
-              className="w-[200px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
+              className="w-[250px] md:w-[200px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
               min="0"
               max="100"
               ref={inputVolumen}
