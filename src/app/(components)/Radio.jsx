@@ -14,7 +14,7 @@ import RadioIcon from '../public/logo crs.svg'
 
 import { BsPlayCircleFill } from "react-icons/bs";
 import { IoPlaySkipBackSharp } from "react-icons/io5";
-import { IoPlaySkipForward } from "react-icons/io5";
+import { IoPlaySkipForwardSharp } from "react-icons/io5";
 import { IoPauseCircle } from "react-icons/io5";
 
 import { useAppContext } from "../(context)/AppWrapper.jsx";
@@ -103,7 +103,7 @@ const Radio = () => {
     >
       <div className=" md:mb-0 -mt-[100px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[320px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
 
-       
+
         {/* mt-8 items-center -space-y-2 text-center flex flex-col justify-center */}
         <div className="  justify-center items-center flex flex-col text-center  flex-nowrap">
           <div className="">
@@ -114,7 +114,7 @@ const Radio = () => {
                 height={50}
                 alt=""
                 priority={true}
-                className="rounded-2xl object-contain mt-11 text-white"
+                className="object-contain mt-11 text-white"
               />
             </Link>
           </div>
@@ -194,13 +194,15 @@ const Radio = () => {
             className=""
             onClick={avanzar}
           >
-            <IoPlaySkipForward
+            <IoPlaySkipForwardSharp
               className="mx-auto w-[35px] h-[35px] text-white fill-white"
               color={`${botonAdelantar ? "#FFFFF" : "#FFFFF"}`}
             />
           </button>
         </div>
       </div>
+
+   
     </div>
   )
 }

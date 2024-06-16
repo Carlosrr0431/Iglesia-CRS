@@ -16,10 +16,10 @@ const Modal = ({ setShowModal, nameCard, card }) => {
 
         setShowModal(false)
 
-        await createPreferenc(e.target[1].value, e.target[2].value)
+        await createPreferenc(e.target[1].value, e.target[2].value, e.target[0].value )
     }
 
-    const createPreferenc = async (monto, descripcion) => {
+    const createPreferenc = async (monto, descripcion, nombre) => {
         try {
 
             const response = await axios.post(
@@ -29,7 +29,8 @@ const Modal = ({ setShowModal, nameCard, card }) => {
                     title: nameCard,
                     quantity: 1,
                     price: monto,
-                    description: descripcion
+                    description: descripcion,
+                    name: nombre
 
                 },
 

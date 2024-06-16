@@ -21,6 +21,7 @@ export async function POST(request) {
           quantity: Number(1),
           unit_price: Number(datos.price),
           currency_id: "ARS",
+          category_id: datos.name
         },
       ],
 

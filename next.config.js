@@ -17,6 +17,15 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com", "lh3.googleusercontent.com"],
   },
+
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        'http://localhost/3000',
+        'https://d0jvt1bv-3000.brs.devtunnels.ms/',
+      ]
+    }
+  }
 };
 
 module.exports = nextConfig;

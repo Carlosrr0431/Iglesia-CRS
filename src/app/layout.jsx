@@ -21,12 +21,12 @@ export const metadata = {
   description: "Iglesia Cristiana del Dios VIVO",
   manifest: "/manifest.json",
   keywords: ['Iglesia', 'Iglesia Salta', 'Iglesia Cristiana', 'Iglesia Evangelica', 'Centro de restauración', 'Orar', 'Culto', 'Lugar para orar'],
-  metadataBase: new URL('https://www.centroderestauracion.com.ar/'),
+  metadataBase: new URL('https://www.centroderestauracion.com.ar'),
   openGraph: {
     title: 'Iglesia Centro de Restauración Salta',
     description: 'Ven a adorar al Rey y a compartir en familia',
     siteName: 'Iglesia CRS',
-    url: 'https://www.centroderestauracion.com.ar/',
+    url: 'https://www.centroderestauracion.com.ar',
     type: 'website',
     images: [
       {

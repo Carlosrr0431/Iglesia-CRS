@@ -7,7 +7,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Portada from "../public/IMAGEN PARA PORTADA DE RADIO.jpg";
+import Portada from "../public/version escritorio-03.svg";
 import { SwipperRadio } from "./SwipperRadio";
 import Providers from "../(providers)/Providers";
 import { ChatResponsive } from "./ChatResponsive";
@@ -39,7 +39,7 @@ const Radio = () => {
 
       {
         width < 760 ? (<SwipperRadio />) : (
-          <div className="h-[100dvh] z-50  mx-auto  md:flex items-center justify-center gap-x-10 ">
+          <div className="h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
 
             <div
               className=""
@@ -57,15 +57,16 @@ const Radio = () => {
               </Providers>
             </div>
 
-            <div className="fixed inset-0 h-screen -z-10">
-              <div className="xl:bg-right xl:bg-no-repeat w-full opacity-70 bg-fondo h-full  translate-z-50 fixed  "></div>
+            <div className="fixed inset-0 h-screen ">
+              <div className="xl:bg-right xl:bg-no-repeat w-full opacity-80  h-full  translate-z-50 fixed  "></div>
 
               <Image
                 src={Portada}
                 width={0}
                 height={0}
                 alt=""
-                className="w-full h-full object-fill"
+                priority={true}
+                className="w-full h-full object-contain"
               />
 
 

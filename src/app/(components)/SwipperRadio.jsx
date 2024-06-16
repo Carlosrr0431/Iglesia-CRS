@@ -12,7 +12,7 @@ import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import Radio from './Radio';
 import { ChatResponsive } from './ChatResponsive';
-import Portada from "../public/IMAGEN PARA PORTADA DE RADIO.jpg";
+import Portada from "../public/para radio celular-03.svg";
 import Providers from '../(providers)/Providers';
 import { useAppContext } from '../(context)/AppWrapper';
 
@@ -23,19 +23,29 @@ export const SwipperRadio = () => {
 
     const { swiperRef, setSwiper, swiper } = useAppContext();
 
+
+    useEffect(() => {
+      
+
+    if ( swiper == "Chat") {
+        swiperRef.current?.slideNext()
+    } 
+    })
+    
+
     return (
-        <div className='w-full h-full bg-blue-800 mix-blend-multiply  '>
+        <div className='w-full h-full   bg-blue-800 mix-blend-multiply '>
 
             <div className="flex md:hidden  items-center justify-center w-full  row z-50">
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
-                    className={`px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50  ${swiper == 'Radio' ? 'font-extrabold text-2xl text-white ' : 'text-gray-900'} `}
+                    className={`px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50  ${swiper == 'Radio' ? 'font-normal text-2xl text-white ' : 'text-gray-900'} `}
                     type="button">
                     Radio online
                 </button>
                 <button
                     onClick={() => swiperRef.current?.slideNext()}
-                    className={`px-6 py-3 font-sans text-xs font-bold text-center  uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50   ${swiper == 'Chat' ? 'font-extrabold text-2xl text-white' : 'text-gray-900'}`}
+                    className={`px-6 py-3 font-sans text-xs font-bold text-center  uppercase align-middle transition-all border-r-0 rounded-lg rounded-l-none rounded-r-none select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none z-50   ${swiper == 'Chat' ? 'font-normal text-2xl text-white' : 'text-gray-900'}`}
                     type="button">
                     Chat en vivo
                 </button>
@@ -69,8 +79,22 @@ export const SwipperRadio = () => {
 
 
 
-                <SwiperSlide>
+                <SwiperSlide className='relative'>
                     <Radio />
+
+                    <div className="fixed inset-0 h-screen -z-10">
+                        <div className="xl:bg-right xl:bg-no-repeat w-full h-full  translate-z-50 fixed  "></div>
+
+                        <Image
+                            src={Portada}
+                            width={0}
+                            height={0}
+                            priority={true}
+                        
+                            alt=""
+                            className="w-full h-full object-contain opacity-80"
+                        />
+                    </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
@@ -79,17 +103,7 @@ export const SwipperRadio = () => {
                     </Providers>
                 </SwiperSlide>
 
-                {/* <div className="fixed inset-0 h-screen -z-10">
-                    <div className="xl:bg-right xl:bg-no-repeat w-full opacity-70 bg-fondo h-full  translate-z-50 fixed  "></div>
 
-                    <Image
-                        src={Portada}
-                        width={0}
-                        height={0}
-                        alt=""
-                        className="w-full h-full object-fill"
-                    />
-                </div> */}
 
             </Swiper>
         </div>

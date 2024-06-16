@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
-
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+
+let contador = 1;
+let fuente = "";
 
 export async function GET() {
   return NextResponse.json("Entro al servidor");
@@ -17,14 +19,11 @@ export async function POST(request) {
       cookies: () => cookieStore,
     }
   );
-
   const resp = await request.json();
 
+  if (resp?.resource) fuente = resp.resource;
+
   const paymenyId = resp?.data?.id;
-
-
-  
-
 
   const response = await fetch(
     `https://api.mercadopago.com/v1/payments/${paymenyId}`,
@@ -36,51 +35,136 @@ export async function POST(request) {
     }
   );
 
+  if (response.ok) {
+    const data = await response.json();
 
-  const data = await response.json();
-
-
-  const response2 = await fetch(
-    `https://api.mercadopago.com/checkout/preferences/${data.id}`,
-    {
+    const response2 = await fetch(fuente, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${process.env.MERCADO_PAGO_ACCESS_TOKEN}`,
       },
-    }
-  );
+    });
 
-  const data3 = await response2.json()
+    const dato = await response2.text();
 
-  console.log("preferences: " + JSON.stringify(data3));
+    const dataInfo = JSON.parse(dato)
 
-  if (response.ok) {
-  
-    const dataTransform = {
-      descripcion: data.description,
-      monto: data.transaction_amount,
-      tipo: data.payment_method.type,
-      email: data.payer.email,
-    };
+    // approved
+    console.log(dataInfo.payments[0].status);
+    console.log(dataInfo.items[0]);
+    // const dataTransform = JSON.parse({items})
+    // console.log("Datatransform: " +  dataTransform);
+    // console.log(dataTransform.items[0].title);
 
-    const result2 = await supabase
-      .from("donaciones")
-      .insert({
-        descripcion: data.description,
-        monto: data.transaction_amount,
-        tipo: data.payment_method.type,
-        email: data.payer.email,
-      })
-      .single();
+    // const descripcionUser = dataTransform.items[0].description;
 
+    // if (contador == 1 && dataTransform.items != undefined) {
+      // console.log(JSON.parse(dataTransform).items[0].title);
 
-      console.log(data);
+      // const descripcionUser = dataTransform.items[0].description;
+
+      // console.log(descripcionUser);
+
+      // const result2 = await supabase
+      // .from("donaciones")
+      // .insert({
+      //   descripcion: descripcionUser,
+      //   monto: data.transaction_amount,
+      //   tipo: data.payment_method.type,
+      //   email: data.payer.email,
+      //   titulo: data.description,
+      // })
+      // .single();
+
+    //   contador++;
+    // }
 
     return NextResponse.json(data);
   }
 
   return NextResponse.json({ paymenyId });
 }
+
+//    --   Recuperar --
+
+// import { NextResponse } from "next/server";
+
+// import { createServerClient } from "@supabase/ssr";
+// import { cookies } from "next/headers";
+
+// export async function GET() {
+//   return NextResponse.json("Entro al servidor");
+// }
+
+// export async function POST(request) {
+// const cookieStore = cookies();
+
+// const supabase = createServerClient(
+//   process.env.NEXT_PUBLIC_SUPABASE_URL,
+//   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+//   {
+//     cookies: () => cookieStore,
+//   }
+// );
+
+//   const resp = await request.json();
+
+//   const paymenyId = resp?.data?.id;
+
+//   const response = await fetch(
+//     `https://api.mercadopago.com/v1/payments/${paymenyId}`,
+//     {
+//       method: "GET",
+//       headers: {
+//         Authorization: `Bearer ${process.env.MERCADO_PAGO_ACCESS_TOKEN}`,
+//       },
+//     }
+//   );
+
+//   const data = await response.json();
+
+//   const response2 = await fetch(
+//     `https://api.mercadopago.com/checkout/preferences/${data.id}`,
+//     {
+//       method: "GET",
+//       headers: {
+//         Authorization: `Bearer ${process.env.MERCADO_PAGO_ACCESS_TOKEN}`,
+//       },
+//     }
+//   );
+
+//   const data3 = await response2.json()
+
+//   console.log("preferences: " + JSON.stringify(data3));
+
+//   if (response.ok) {
+
+//     const dataTransform = {
+//       descripcion: data.description,
+//       monto: data.transaction_amount,
+//       tipo: data.payment_method.type,
+//       email: data.payer.email,
+//     };
+
+// const result2 = await supabase
+//   .from("donaciones")
+//   .insert({
+//     descripcion: data.description,
+//     monto: data.transaction_amount,
+//     tipo: data.payment_method.type,
+//     email: data.payer.email,
+//   })
+//   .single();
+
+//       console.log(data);
+
+//     return NextResponse.json(data);
+//   }
+
+//   return NextResponse.json({ paymenyId });
+// }
+
+// ----------------------
 
 // import { NextResponse } from "next/server";
 // import Donation from "../../models/Donation";
@@ -99,18 +183,18 @@ export async function POST(request) {
 //   if (resp?.resource) fuente = resp.resource;
 
 //   const paymenyId = resp?.data?.id;
-  
+
 //   console.log(paymenyId);
 
-  // const response = await fetch(
-  //   `https://api.mercadopago.com/v1/payments/${paymenyId}`,
-  //   {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization: `Bearer ${process.env.MERCADO_PAGO_ACCESS_TOKEN}`,
-  //     },
-  //   }
-  // );
+// const response = await fetch(
+//   `https://api.mercadopago.com/v1/payments/${paymenyId}`,
+//   {
+//     method: "GET",
+//     headers: {
+//       Authorization: `Bearer ${process.env.MERCADO_PAGO_ACCESS_TOKEN}`,
+//     },
+//   }
+// );
 
 //   if (response.ok) {
 //     const data = await response.json();
@@ -138,7 +222,6 @@ export async function POST(request) {
 //       });
 //       contador++;
 //     }
-
 
 //     return NextResponse.json(data);
 //   }
