@@ -96,7 +96,7 @@ export const RadioSpectreCelular = ({ url, ancho, largo }) => {
       />
 
 
-      <canvas ref={canvasRef} width={260} height={80} />
+      <canvas ref={canvasRef} width={220} height={80} />
     </div>
   );
 };

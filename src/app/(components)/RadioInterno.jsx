@@ -57,7 +57,7 @@ const Radio = () => {
               </Providers>
             </div>
 
-            <div className="fixed inset-0 h-screen ">
+            <div className="fixed inset-0 h-screen -z-10">
               <div className="xl:bg-right xl:bg-no-repeat w-full opacity-80  h-full  translate-z-50 fixed  "></div>
 
               <Image

@@ -101,7 +101,7 @@ const Radio = () => {
     <div
 
     >
-      <div className=" md:mb-0 -mt-[100px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[320px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
+      <div className=" md:mb-0 -mt-[120px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
 
 
         {/* mt-8 items-center -space-y-2 text-center flex flex-col justify-center */}
@@ -128,7 +128,7 @@ const Radio = () => {
           <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
         </div>
 
-        <div className="  text-white  monstserrat text-[17px]">
+        <div className="  text-white  monstserrat text-[14px]">
           ESCUCHARTE ME HACE BIEN
         </div>
 
@@ -148,7 +148,7 @@ const Radio = () => {
           <div className="w-full  rounded-full  -translate-y-1.5">
             <input
               type="range"
-              className="w-[250px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
+              className="w-[200px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
               min="0"
               max="100"
               ref={inputVolumen}
@@ -157,7 +157,7 @@ const Radio = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-x-10  ">
+        <div className="flex justify-center items-center gap-x-10 mb:mb-4 mb:-mt-4  ">
           <button
             onClick={retroceder}
             onPointerEnter={() => setBotonAtras(true)}
