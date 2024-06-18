@@ -1,20 +1,21 @@
 import React from 'react'
-import { HiCheck } from "react-icons/hi";
-
+import { GoCheckCircle } from "react-icons/go";
 const Exitoso = () => {
     return (
-        <div className='w-full h-screen bg-teal-600'>
+        <div className='w-full h-screen bg-teal-700'>
 
-            <div className='w-[400px] h-[200px] bg-white/20 mx-auto flex relative top-[30dvh]'>
-                <div className='px-4'>
-                    <HiCheck className='h-[100px] w-[100px]  text-green-900 mx-auto' />
-                    <h2 className='text-2xl text-black montserrat'>¡Muchas Gracias...! Estaremos orando por ti y tu familia.</h2>
+            <div className='w-[400px] h-[200px]  mx-auto flex relative top-[30dvh]'>
+                <div className='px-4 text-center'>
+                    <GoCheckCircle className='h-[80px] w-[80px]  text-green-500 mx-auto' />
+                    <h2 className='text-2xl my-2 text-white montserrat'>¡Muchas Gracias!</h2>
+                    <p className='text-[15px]'>¡Aleluya! ¡Alabado sea el Señor! Den gracias al Señor, porque él es bueno; su gran amor perdura para siempre.
+                    (Salmo 106:1)</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Exitosogit add .git add .
+export default Exitoso
 
 

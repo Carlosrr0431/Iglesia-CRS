@@ -49,8 +49,8 @@ export async function POST(request) {
     const dataInfo = JSON.parse(dato);
 
     // approved
-    console.log(dataInfo.payments[0].status);
-    console.log(dataInfo.items[0]);
+    // console.log(dataInfo.payments[0].status);
+    // console.log(dataInfo.items[0]);
     // const dataTransform = JSON.parse({items})
     // console.log("Datatransform: " +  dataTransform);
     // console.log(dataTransform.items[0].title);
@@ -72,8 +72,7 @@ export async function POST(request) {
           })
           .single();
 
-        console.log("monto" + data.transaction_amount);
-        console.log("Se guardo: " + result2);
+
       } catch (error) {
         console.log(error);
       }

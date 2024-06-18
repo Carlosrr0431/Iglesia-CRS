@@ -26,14 +26,12 @@ export async function POST(request) {
       ],
 
       back_urls: {
-        success: "https://tn.com.ar/",
-        failure: "https://tn.com.ar/",
-        pending: "https://tn.com.ar/",
+        success: "http://centroderestauracion.com.ar/payments/exitoso",
+        failure: "http://centroderestauracion.com.ar/payments/denegado",
       },
 
       auto_return: "approved",
-      // https://d0jvt1bv-3000.brs.devtunnels.ms/
-      notification_url: "https://d0jvt1bv-3000.brs.devtunnels.ms/api/webhook",
+      notification_url: "http://centroderestauracion.com.ar/api/webhook",
       // notification_url: "https://iglesia-crs-vqz6.vercel.app/api/webhook",
     };
 
