@@ -20,10 +20,7 @@ const nextConfig = {
 
   experimental: {
     serverActions: {
-      allowedOrigins: [
-        'http://localhost/3000',
-        'https://d0jvt1bv-3000.brs.devtunnels.ms/',
-      ]
+      allowedOrigins: ["https://d0jvt1bv-3000.brs.devtunnels.ms", "localhost:3000"]
     }
   }
 };

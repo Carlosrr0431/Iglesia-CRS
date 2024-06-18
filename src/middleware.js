@@ -11,8 +11,9 @@ export default withAuth({
   callbacks: {
     authorized({ req, token }) {
 
+      console.log("token: " + token?.role);
+
       if (
-        token?.email == "carlos.facundo.rr@gmail.com" &&
         req.nextUrl.pathname.startsWith("/dashboard") && token?.role == "Admin"
       ) {
         return true;

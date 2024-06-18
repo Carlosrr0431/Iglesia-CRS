@@ -92,7 +92,7 @@ export const SwipperRadio = () => {
                             priority={true}
                         
                             alt=""
-                            className="w-full h-full object-contain opacity-80"
+                            className="w-full h-full object-fill opacity-80"
                         />
                     </div>
                 </SwiperSlide>

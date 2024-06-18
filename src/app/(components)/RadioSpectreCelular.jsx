@@ -4,12 +4,17 @@ import { useAppContext } from "../(context)/AppWrapper";
 
 let animationController;
 
-export const RadioSpectreCelular = ({ url, ancho }) => {
-  const { inputEl } = useAppContext();
+export const RadioSpectreCelular = ({ url}) => {
+  const { inputEl, ancho } = useAppContext();
   const canvasRef = useRef();
   const audioRef = inputEl;
   const source = useRef();
   const analyzer = useRef();
+
+  useEffect(() => {
+    console.log(ancho);
+  }, [])
+  
 
   const handledAudioPause = (e) => {
     if (e) {
@@ -85,7 +90,7 @@ export const RadioSpectreCelular = ({ url, ancho }) => {
 
 
 
-    <div className="-mb-5 z-120">
+    <div className="-my-4 md:-mb-5 z-120">
 
       <audio
         ref={audioRef}
@@ -96,7 +101,7 @@ export const RadioSpectreCelular = ({ url, ancho }) => {
       />
 
 
-      <canvas ref={canvasRef} width={ ancho < 700 ? 270 : 220} height={80} />
+      <canvas ref={canvasRef} width={ ancho < 700 ? 250 : 220} height={80} />
     </div>
   );
 };

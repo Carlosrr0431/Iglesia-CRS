@@ -73,13 +73,53 @@ export async function sendForm(formData) {
     })
     .single();
 
-  
-
   return {
     errores: {
       text: !motivo ? "El texto es requerido" : undefined,
     },
   };
+}
+
+export async function userAdmin(datos, tipo, id) {
+  const cookieStore = cookies();
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    {
+      cookies: () => cookieStore,
+    }
+  );
+
+  const nombre = datos?.name;
+  const email = datos?.email;
+
+
+
+  if ( tipo == "Agregar" ) {
+    const result2 = await supabase
+    .from("autorizados")
+    .insert({
+      nombre: nombre,
+      email: email,
+    })
+    .single();
+  } else if ( tipo == "Modificar") {
+    const result2 = await supabase
+    .from("autorizados")
+    .update({
+      nombre: nombre,
+      email: email,
+    })
+    .eq("id", id);
+  } else if ( tipo == "Eliminar") {
+    const result2 = await supabase
+    .from("autorizados")
+    .delete()
+    .eq("id", id);
+  }
+
+  return { message: "Success" };
 }
 
 export async function actualizarDatos(formData, idEvento, tipo) {

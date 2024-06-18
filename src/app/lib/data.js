@@ -13,27 +13,66 @@ import { NextResponse } from "next/server.js";
 
 export const fetchPayments = async () => {
   try {
-    await connectToDB();
+    const cookieStore = cookies();
 
-    const payments = await Donation.find();
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      {
+        cookies: () => cookieStore,
+      }
+    );
 
-    const data = JSON.parse(JSON.stringify(payments));
+    let { data: donaciones, error } = await supabase
+      .from("donaciones")
+      .select("*");
 
-    return data;
+    return donaciones;
   } catch (error) {
     console.log(error);
   }
 };
 
+export const getUsuarios = async () => {
+  try {
+    const cookieStore = cookies();
+
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      {
+        cookies: () => cookieStore,
+      }
+    );
+
+    let { data: autorizados, error } = await supabase
+      .from("autorizados")
+      .select("*");
+
+    return autorizados;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 export const fetchOraciones = async () => {
   try {
-    await connectToDB();
+    const cookieStore = cookies();
 
-    const oraciones = await Oracion.find();
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      {
+        cookies: () => cookieStore,
+      }
+    );
 
-    const data = JSON.parse(JSON.stringify(oraciones));
+    let { data: oraciones, error } = await supabase
+      .from("oraciones")
+      .select("*");
 
-    return data;
+    return oraciones;
   } catch (error) {
     console.log(error);
   }
@@ -41,13 +80,21 @@ export const fetchOraciones = async () => {
 
 export const fetchEventos = async () => {
   try {
-    await connectToDB();
+    const cookieStore = cookies();
 
-    const eventos = await Evento.find();
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      {
+        cookies: () => cookieStore,
+      }
+    );
 
-    const data = JSON.parse(JSON.stringify(eventos));
+    let { data: eventosOficiales, error } = await supabase
+      .from("eventosOficiales")
+      .select("*");
 
-    return data;
+    return eventosOficiales;
   } catch (error) {
     console.log(error);
   }
@@ -55,13 +102,21 @@ export const fetchEventos = async () => {
 
 export const fetchEventosEspeciales = async () => {
   try {
-    await connectToDB();
+    const cookieStore = cookies();
 
-    const eventos = await EventoEspecial.find();
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      {
+        cookies: () => cookieStore,
+      }
+    );
 
-    const data = JSON.parse(JSON.stringify(eventos));
+    let { data: eventosEspeciales, error } = await supabase
+      .from("eventosEspeciales")
+      .select("*");
 
-    return data;
+    return eventosEspeciales;
   } catch (error) {
     console.log(error);
   }

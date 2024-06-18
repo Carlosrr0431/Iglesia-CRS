@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-let contador = 1;
 let fuente = "";
 
 export async function GET() {
@@ -47,7 +46,7 @@ export async function POST(request) {
 
     const dato = await response2.text();
 
-    const dataInfo = JSON.parse(dato)
+    const dataInfo = JSON.parse(dato);
 
     // approved
     console.log(dataInfo.payments[0].status);
@@ -58,26 +57,27 @@ export async function POST(request) {
 
     // const descripcionUser = dataTransform.items[0].description;
 
-    // if (contador == 1 && dataTransform.items != undefined) {
-      // console.log(JSON.parse(dataTransform).items[0].title);
+    if (
+      dataInfo.items[0] != undefined &&
+      dataInfo.payments[0].status == "approved"
+    ) {
+      try {
+        const result2 = await supabase
+          .from("donaciones")
+          .insert({
+            descripcion: dataInfo.items[0].description,
+            monto: data.transaction_amount,
+            tipo: dataInfo.items[0].title,
+            nombre: dataInfo.items[0].category_id,
+          })
+          .single();
 
-      // const descripcionUser = dataTransform.items[0].description;
-
-      // console.log(descripcionUser);
-
-      // const result2 = await supabase
-      // .from("donaciones")
-      // .insert({
-      //   descripcion: descripcionUser,
-      //   monto: data.transaction_amount,
-      //   tipo: data.payment_method.type,
-      //   email: data.payer.email,
-      //   titulo: data.description,
-      // })
-      // .single();
-
-    //   contador++;
-    // }
+        console.log("monto" + data.transaction_amount);
+        console.log("Se guardo: " + result2);
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
     return NextResponse.json(data);
   }

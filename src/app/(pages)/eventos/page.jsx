@@ -205,8 +205,8 @@ const Eventos = () => {
                                     }, */}
 
 
-                                <div className='absolute bottom-0 flex  items-center right-0 left-0 m-auto place-content-center rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
-                                    <div className='flex flex-col justify-evenly p-4'>
+                                <div className='absolute bottom-0 flex   right-0 left-0 m-auto  rounded-xl bg-white/70 h-[150px] w-[250px] my-[50px]'>
+                                    <div className='flex flex-col justify-between p-4'>
                                         <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                             {item.titulo}
                                         </h4>

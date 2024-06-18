@@ -3,10 +3,10 @@
 import React, { useState, useRef } from "react";
 
 import { useRouter } from 'next/navigation'
-import Cancel from '../public/cancel.svg'
 import { Toaster, toast } from 'sonner'
 import { sendForm } from "../action.js";
 import Image from "next/image.js";
+import Cancel from '../public/cancel.svg'
 
 // import { useFormState } from "react-dom";
 
@@ -27,11 +27,13 @@ const ModalOracion = ({ setShowModal }) => {
         <div className={`fixed inset-0  z-50 
              flex items-center justify-center h-full w-full 
              `}>
-            <div className="rounded-[10px] shadow-2xl bg-white/20 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto">
+            <div className="rounded-[10px] shadow-2xl bg-white/40 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto">
                 <div className="flex">
                     <h1 className=" w-full text-center text-grey-darkest mb-6">Pedir oración</h1>
                     <div className="" onClick={() => setShowModal(false)}>
-                        <Image src={Cancel} height={40} width={40} alt="" className="" />
+                        <button className="cursor-pointer">
+                            <Image src={Cancel} height={40} width={40} alt="" className="hover:scale-110" />
+                        </button>
                     </div>
                 </div>
                 <form className="mb-4 md:flex  md:flex-wrap md:justify-between" action={(formData) => sendForm(formData)} onSubmit={() => {
@@ -55,8 +57,8 @@ const ModalOracion = ({ setShowModal }) => {
                             placeholder="Motivo de la oración"
                             rows="4" id="mensaje"
                             name="mensaje"
-                            
-                  
+
+
                             className="px-3 py-2 bg-white text-lg border-gray-900 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
                         ></textarea>
                     </div>

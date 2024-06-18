@@ -254,18 +254,18 @@ const Iglesia = () => {
                     <form className="mb-4 md:flex  md:flex-wrap md:justify-between" action={(formData) => sendForm(formData)} onSubmit={() => setShowModal(false)}>
                         <div className="flex flex-col mb-4 md:w-1/2">
 
-                            <input className="border py-2 px-3 text-grey-darkest md:mr-2 focus:outline-none focus:bg-white/90 text-black text-lg focus:text-black rounded-[5px]" type="text" name="name" id="name" placeholder="Nombre y Apellido" />
+                            <input className="border py-2 px-3 text-grey-darkest md:mr-2 focus:outline-none focus:bg-white/90 text-black text-lg focus:text-black rounded-[5px]" type="text" name="name" id="name" placeholder="Nombre y Apellido" required />
                         </div>
                         <div className="flex flex-col mb-4 md:w-1/2">
 
-                            <input className="border text-lg py-2 px-3 text-grey-darkest md:ml-2 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]" type="number" name="phone" id="phone" placeholder="Número de celular" />
+                            <input className="border text-lg py-2 px-3 text-grey-darkest md:ml-2 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]" type="number" name="phone" id="phone" required placeholder="Número de celular" />
                         </div>
                         <div className="flex flex-col mb-4 md:w-full">
                             <textarea
                                 placeholder="Motivo de la oración"
                                 rows="4" id="mensaje"
                                 name="mensaje"
-                                className="px-3 py-2 bg-white text-lg border-gray-900 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]"
+                                className="px-3 py-2 bg-white text-lg border-gray-900 focus:outline-none focus:bg-white/90 text-black focus:text-black rounded-[5px]" required
                             ></textarea>
                         </div>
 

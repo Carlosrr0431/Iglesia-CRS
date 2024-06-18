@@ -26,6 +26,7 @@ export const AppWrapper = ({ children }) => {
   const [ isOpenVersiculo, setIsOpenVersiculo ] = useState(false)
   const [ isOpenLibro, setIsOpenLibro ] = useState(false)
   const [ isOpenBiblia, setIsOpenBiblia ] = useState(false);
+  const [ ancho, setAncho ] = useState();
 
 
   const obj = {
@@ -46,7 +47,9 @@ export const AppWrapper = ({ children }) => {
     setIsOpenLibro,
     swiperRef,
     swiper,
-    setSwiper
+    setSwiper,
+    ancho,
+    setAncho
   }
   return (
     <AppContext.Provider value={obj}>

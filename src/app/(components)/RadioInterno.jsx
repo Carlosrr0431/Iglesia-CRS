@@ -13,24 +13,23 @@ import Providers from "../(providers)/Providers";
 import { ChatResponsive } from "./ChatResponsive";
 
 import Radio2 from "../(components)/Radio.jsx"
+import { useAppContext } from "../(context)/AppWrapper";
 
 const Radio = () => {
 
-  const [width, setWidth] = useState(window?.innerWidth);
-  const [height, setHeight] = useState(window?.innerHeight);
+
+  const {ancho, setAncho} = useAppContext()
 
   useEffect(() => {
     window?.addEventListener("resize", () => {
-      setWidth(window?.innerWidth);
-      setHeight(window?.innerHeight);
+      setAncho(window?.innerWidth);
     });
     return () => {
       window?.removeEventListener("resize", () => {
-        setWidth(window?.innerWidth);
-        setHeight(window?.innerHeight);
+        setAncho(window?.innerWidth);
       });
     };
-  }, [])
+  })
 
 
   return (
@@ -38,14 +37,14 @@ const Radio = () => {
        ">
 
       {
-        width < 760 ? (<SwipperRadio />) : (
+        ancho < 760 ? (<SwipperRadio />) : (
           <div className="h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
 
             <div
               className=""
             >
 
-              <Radio2 ancho = {width} />
+              <Radio2 />
 
             </div>
             <div className=''>

@@ -92,7 +92,6 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
         return () => {
 
-            console.log("Entro");
             supabaseClient.removeChannel(supabaseClient.channel(channelOficial))
             supabaseClient.removeChannel(supabaseClient.channel(channelEspecial))
         }
@@ -119,7 +118,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                         <div
 
-                            key={index} className="relative  flex  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mt-4">
+                            key={index} className="relative  flex  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mt-4 w-[50%] h-[300px]">
 
                             <div className="relative m-0 w-2/5 shrink-0 overflow-hidden  rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                                 <Image
@@ -132,7 +131,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
                             </div>
                             <div className="p-6">
 
-                                <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
+                                <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-black antialiased">
                                     {elem.titulo}
                                 </h6>
 
@@ -142,9 +141,9 @@ const DashBoardInfoContenido = ({ tipo }) => {
                                     <span className=' font-bold'>Fecha</span>: {elem.fecha.slice(2, 10).split('-').reverse().join('/')}
                                 </h3>
 
-                                <a className="flex mt-14" >
+                                <a className="flex mt-[100px] gap-x-4" >
                                     <button
-                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center border-[1px] border-gray-800 align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:bg-pink-500/10 hover:text-slate-900 bg-slate-900 active:bg-pink-500/30   disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => {
                                             setShowModal(true)
@@ -156,7 +155,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                                     </button>
                                     <button
-                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-red-800/80 hover:text-white active:bg-red-600 disabled:pointer-events-none disabled:opacity-50 border-[1px] border-gray-800  disabled:shadow-none outline-none"
                                         type="button"
                                         onClick={() => EliminarEvento(tipo, elem.id)
                                         }
@@ -185,7 +184,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                         <div
 
-                            key={index} className="relative  flex  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mt-4">
+                            key={index} className="relative  flex  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mt-4 w-[50%] h-[300px]">
 
                             <div className="relative m-0 w-2/5 shrink-0 overflow-hidden  rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                                 <Image
@@ -197,18 +196,20 @@ const DashBoardInfoContenido = ({ tipo }) => {
                                 />
                             </div>
                             <div className="p-6">
-                                <h6 claclassNamess="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
+
+                                <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-black antialiased">
                                     {elem.titulo}
                                 </h6>
+
 
 
                                 <h3 className="block font-sans  font-normal leading-relaxed text-gray-700 antialiased text-md mt-14">
                                     <span className=' font-bold'>Fecha</span>: {elem.fecha.slice(2, 10).split('-').reverse().join('/')}
                                 </h3>
 
-                                <a className="flex mt-14" >
+                                <a className="flex mt-[100px] gap-x-4" >
                                     <button
-                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center border-[1px] border-gray-800 align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:bg-pink-500/10 hover:text-slate-900 bg-slate-900 active:bg-pink-500/30   disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                         type="button"
                                         onClick={() => {
                                             setShowModal(true)
@@ -220,7 +221,7 @@ const DashBoardInfoContenido = ({ tipo }) => {
 
                                     </button>
                                     <button
-                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-slate-800 transition-all hover:bg-red-800/80 hover:text-white active:bg-red-600 disabled:pointer-events-none disabled:opacity-50 border-[1px] border-gray-800  disabled:shadow-none"
                                         type="button"
                                         onClick={() => EliminarEvento(tipo, elem.id)
                                         }

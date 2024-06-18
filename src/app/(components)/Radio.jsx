@@ -13,7 +13,7 @@ import { FaVolumeDown } from "react-icons/fa";
 import RadioIcon from '../public/logo crs.svg'
 
 import { BsPlayCircleFill } from "react-icons/bs";
-import { IoPlaySkipBackSharp } from "react-icons/io5";
+import { IoPlayCircle, IoPlaySkipBackSharp } from "react-icons/io5";
 import { IoPlaySkipForwardSharp } from "react-icons/io5";
 import { IoPauseCircle } from "react-icons/io5";
 
@@ -21,7 +21,7 @@ import { useAppContext } from "../(context)/AppWrapper.jsx";
 import { RadioSpectre } from "./RadioSpectre.jsx";
 import { RadioSpectreCelular } from "./RadioSpectreCelular";
 
-const Radio = ({ancho}) => {
+const Radio = () => {
 
   const [control, setControl] = useState(true);
   const [count, setCount] = useState(0);
@@ -33,13 +33,16 @@ const Radio = ({ancho}) => {
   const [controlVolumen, setControlVolumen] = useState(true);
   const [volumenAct, setVolumenAct] = useState(0)
   const [controlVolumenAdelantar, setControlVolumenAdelantar] = useState(true);
-  const { inputEl, swiperRef, swiper } = useAppContext();
+  const { inputEl } = useAppContext();
 
   useEffect(() => {
     // inputEl.current.volume = 1
     // inputVolumen.current.value = 100
 
     setControlVolumenAdelantar(false);
+
+
+
   }, [])
 
 
@@ -101,10 +104,8 @@ const Radio = ({ancho}) => {
     <div
 
     >
-      <div className=" md:mb-0 -mt-[120px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
+      <div className=" md:mb-0 -mt-[90px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
 
-
-        {/* mt-8 items-center -space-y-2 text-center flex flex-col justify-center */}
         <div className="  justify-center items-center flex flex-col text-center  flex-nowrap">
           <div className="">
             <Link href={"/"}>
@@ -114,7 +115,7 @@ const Radio = ({ancho}) => {
                 height={50}
                 alt=""
                 priority={true}
-                className="object-contain mt-11 text-white"
+                className="object-contain mb-7 mb:mt-4 text-white"
               />
             </Link>
           </div>
@@ -122,13 +123,11 @@ const Radio = ({ancho}) => {
 
         </div>
 
-        {/* <RadioSpectre url="https://server.radiostreaming.com.ar/8738/stream " /> */}
-
         <div className="visible z-20">
-          <RadioSpectreCelular ancho = {ancho} url="https://server.radiostreaming.com.ar/8738/stream " />
+          <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
         </div>
 
-        <div className="  text-white  monstserrat text-[17px] mb:text-[14px]">
+        <div className="  text-white  monstserrat text-[17px] md:text-[15px]">
           ESCUCHARTE ME HACE BIEN
         </div>
 
@@ -148,7 +147,7 @@ const Radio = ({ancho}) => {
           <div className="w-full  rounded-full  -translate-y-1.5">
             <input
               type="range"
-              className="w-[250px] md:w-[200px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
+              className="w-[240px] md:w-[200px]    accent-[#FFFFFF]  h-0.5 rounded-lg"
               min="0"
               max="100"
               ref={inputVolumen}
@@ -157,7 +156,7 @@ const Radio = ({ancho}) => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-x-10 mb:mb-4 mb:-mt-4  ">
+        <div className="flex justify-center items-center  gap-x-8 mb:mb-4 mb:-mt-4  ">
           <button
             onClick={retroceder}
             onPointerEnter={() => setBotonAtras(true)}
@@ -177,13 +176,13 @@ const Radio = ({ancho}) => {
             className=""
           >
             {control ? (
-              <BsPlayCircleFill
-                className="mx-auto w-[50px] h-[50px]"
+              <IoPlayCircle
+                className="mx-auto w-[70px] h-[70px] md:w-[60px] md:h-[60px]"
                 color={`${botonPlayPause ? "#FFFFF" : "#FFFFF"}`}
               />
             ) : (
               <IoPauseCircle
-                className="mx-auto w-[50px] h-[50px]"
+                className="mx-auto w-[70px] h-[70px] md:w-[60px] md:h-[60px]"
                 color={`${botonPlayPause ? "#FFFFF" : "#FFFFF"}`}
               />
             )}
@@ -202,9 +201,8 @@ const Radio = ({ancho}) => {
         </div>
       </div>
 
-   
+
     </div>
   )
 }
-
 export default Radio

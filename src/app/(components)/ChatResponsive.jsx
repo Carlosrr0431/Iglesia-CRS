@@ -210,15 +210,16 @@ export const ChatResponsive = () => {
                                 formRef.current?.reset();
                             }}
                                 ref={formRef} className="flex gap-x-2  mb-[160px] md:mb-0 xs:gap-x-4  shadow-sm w-full">
-                                <input className="w-full xs:mr-2 xs:px-2 xs:mx-2 border-[1px] outline-none border-gray-400 bg-transparent   text-white " type="text"
+                                <input className="w-full md:w-[85%] xs:mr-2 xs:px-2 xs:mx-2 border-[1px] outline-none border-gray-400 bg-transparent   text-white " type="text"
+                                id='message'
                                     name="message"
                                     ref={inputChat}
                                     placeholder="Escribe tu mensaje..." onKeyUp={enterClick2}
 
                                 />
-                                <button  type='submit' className=" cursor-pointer">
+                                <button  type='submit' className="ml-4  w-[120px] md:w-0 ">
                                     
-                                    <BsFillSendFill className="w-5 h-5 xs:w-6 xs:h-6  xs:right-4  relative   text-white  transition-all hover:scale-110   " />
+                                    <BsFillSendFill className=" w-7 cursor-pointer h-7 xs:w-6 xs:h-6  xs:right-4   relative   text-white  hover:scale-110   " />
                                 </button>
                             </form>
                         )

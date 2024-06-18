@@ -15,10 +15,10 @@ const Ubicacion = () => {
       </div>
 
       <div
-      className='block md:hidden mx-[10%] '
+      className='block md:hidden mx-[10%] top-4 relative '
       >
         <h2 className='montserrat text-[35px] leading-tight md:text-[40px] font-normal md:leading-[1.3] mb-4'>¿COMO LLEGAR?</h2>
-        <p className='montserrat text-start text-wrap w-[300px] text-[25px] leading-tight md:text-[25px]  text-white md:leading-[1.3] mb-4'><span className="texto-borde"> Haz clic</span> en ampliar el mapa para ver la ruta según tu medio de transporte.</p>
+        <p className='montserrat text-start text-wrap w-[300px] text-[25px] leading-tight md:text-[25px]  text-white md:leading-[1.3] mb-7'><span className="texto-borde"> Haz clic</span> en ampliar el mapa para ver la ruta según tu medio de transporte.</p>
       </div>
 
       <div

@@ -34,6 +34,12 @@
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 
+  .custom-fileUploader{
+    width: 1000px !important;
+    height: 100px !important;
+    margin: auto;
+
+  }
   .bg-fondo {
     background-size: 100% 100%;
     background-position: 0px 0px, 0px 0px, 0px 0px;
@@ -240,6 +246,8 @@
     /* z-index: ; */
     /* border: 2px none transparent; */
   }
+
+
 
   #name::placeholder {
     color: #585858;

@@ -38,7 +38,7 @@ const Nav = () => {
 
 
   return (
-    <nav className={`${pathname == '/dashboard' ? 'hidden' : 'flex'} montserrat  flex-col  items-center xl:justify-center gap-y-4  fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 w-full top-0 xl:w-12 xl:max-w-md xl:h-screen`}>
+    <nav className={`${pathname == '/dashboard' || pathname == '/login' ? 'hidden' : 'flex'} montserrat  flex-col  items-center xl:justify-center gap-y-4  fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 w-full top-0 xl:w-12 xl:max-w-md xl:h-screen`}>
       <div
         
         className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-5 px-4 md:px-40 xl:px-0 h-[60px]  backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full xl:h-max py-4 bg-slate-800 opacity-80"
