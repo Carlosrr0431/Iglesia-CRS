@@ -38,7 +38,7 @@ const Radio = () => {
 
       {
         ancho < 760 ? (<SwipperRadio />) : (
-          <div className="h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
+          <div className="hidden mb:flex h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
 
             <div
               className=""
@@ -56,7 +56,7 @@ const Radio = () => {
               </Providers>
             </div>
 
-            <div className="fixed inset-0 h-screen -z-10">
+            <div className="hidden md:block fixed inset-0 h-screen -z-10">
               <div className="xl:bg-right xl:bg-no-repeat w-full opacity-80  h-full  translate-z-50 fixed  "></div>
 
               <Image
