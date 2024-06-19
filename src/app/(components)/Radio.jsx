@@ -104,7 +104,10 @@ const Radio = () => {
     <div
 
     >
-      <div className=" md:mb-0 relative bottom-[75px] md:bottom-0 md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white">
+      {/* md:mb-0 -mt-[90px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white */}
+
+      {/* md:mb-0 relative bottom-[75px] md:bottom-0 md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white */}
+      <div className=" md:mb-0 -mt-[90px] md:-mt-[0px] items-center  mx-auto w-full h-screen md:h-[475px]  xs:w-[300px]  flex flex-col justify-center gap-y-8 md:border-[2px] md:border-white ">
 
         <div className="  justify-center items-center flex flex-col text-center  flex-nowrap">
           <div className="">
@@ -124,7 +127,9 @@ const Radio = () => {
         </div>
 
 
-        <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
+        <div className="visible z-20">
+          <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
+        </div>
 
 
         <div className="  text-white  monstserrat text-[17px] md:text-[15px]">

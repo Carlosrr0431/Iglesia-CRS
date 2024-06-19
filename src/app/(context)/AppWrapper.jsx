@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useRef, useState } from 'react'
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 
 
 
@@ -28,6 +28,12 @@ export const AppWrapper = ({ children }) => {
   const [ isOpenBiblia, setIsOpenBiblia ] = useState(false);
   const [ ancho, setAncho ] = useState();
 
+  useEffect(() => {
+    if ( typeof window !== 'undefined' ){
+      setAncho(window.innerWidth)
+    }
+  }, [])
+  
 
   const obj = {
     inputEl: state,

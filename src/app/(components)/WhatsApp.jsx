@@ -13,7 +13,7 @@ const WhatsApp = () => {
 
     return (
         // fixed right-0 bottom-0 z-50 mb-8 mr-8
-        <div className={`${pathname == '/dashboard' ? 'hidden' : 'block'} `}>
+        <div className={`${pathname == '/dashboard' || pathname == '/radio' ? 'hidden' : 'block'} `}>
             <Link
                 rel="noopener noreferrer"
                 target="_blank"
