@@ -44,6 +44,8 @@ const Nav = () => {
         className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-5 px-4 md:px-40 xl:px-0 h-[60px]  backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full xl:h-max py-4 bg-slate-800 opacity-80"
       >
         {navData.map((link, index) => {
+
+          console.log(link.path, pathname);
           return (
             <Link
               className={`${link.path === pathname && "text-accent"
@@ -51,7 +53,7 @@ const Nav = () => {
               key={index}
               href={link.path}
             >
-              <div className="absolute pr-10 right-0 hidden xl:group-hover:flex">
+              <div className="absolute  pr-10 right-0 hidden xl:group-hover:flex">
                 <div className=" relative flex bg-black/30  p-2 text-white items-center  rounded-[15px] ">
                   <div className="text-[13px] text-end  font-regular w-auto text-nowrap leading-none   uppercase">
                     {link.name}
@@ -63,7 +65,7 @@ const Nav = () => {
               </div>
 
               <div className={`flex  flex-col justify-center items-center gap-y-1  ${link.name == 'Eventos' || link.name == 'Ubicacion' ? 'mt-[2px]' : 'mt-[5px]'} `} >
-                <Image src={link.icon} width={0} height={0} alt="" className={`${link.name == 'Mi Semilla' ? 'xl:mb-0' : 'xl:mb-2'} max-w-[25px]  max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] ${link.name == 'Eventos' || link.name == 'Ubicacion' ? 'max-w-[22px] max-h-[22px]  ' : ''} `} />
+                <Image src={link.icon} width={0} height={0} alt=""  className={`${link.name == 'Mi Semilla' ? 'xl:mb-0' : 'xl:mb-2'} max-w-[25px]  max-h-[25px] transition-all hover:scale-110  focus:opacity-[0.85] focus:shadow-none  active:opacity-[0.85] ${link.name == 'Eventos' || link.name == 'Ubicacion' ? 'max-w-[22px] max-h-[22px]  ' : ''} `} />
                 <p className="text-[11px] text-center  font-bold xl:hidden block">{link.name}</p>
               </div>
 
