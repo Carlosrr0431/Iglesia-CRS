@@ -4,7 +4,7 @@ import { useAppContext } from "../(context)/AppWrapper";
 
 let animationController;
 
-export const RadioSpectreCelular = ({ url }) => {
+export const RadioSpectreCelular = ({ url}) => {
   const { inputEl, ancho } = useAppContext();
   const canvasRef = useRef();
   const audioRef = inputEl;
@@ -86,7 +86,7 @@ export const RadioSpectreCelular = ({ url }) => {
 
 
 
-    <div className="-my-4 md:-mb-5   bg-transparent">
+    <div className="-my-4 md:-mb-5 z-50">
 
       <audio
         ref={audioRef}
