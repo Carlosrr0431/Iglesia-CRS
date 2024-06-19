@@ -4,18 +4,14 @@ import { useAppContext } from "../(context)/AppWrapper";
 
 let animationController;
 
-export const RadioSpectreCelular = ({ url}) => {
+export const RadioSpectreCelular = ({ url }) => {
   const { inputEl, ancho } = useAppContext();
   const canvasRef = useRef();
   const audioRef = inputEl;
   const source = useRef();
   const analyzer = useRef();
 
-  useEffect(() => {
-    console.log(ancho);
-  }, [])
   
-
   const handledAudioPause = (e) => {
     if (e) {
       let audioContext = new AudioContext();
@@ -90,14 +86,14 @@ export const RadioSpectreCelular = ({ url}) => {
 
 
 
-    <div className="-my-4 md:-mb-5 z-120">
+    <div className="-my-4 md:-mb-5   bg-transparent">
 
       <audio
         ref={audioRef}
         onPlay={handleAudioPlay}
         onPause={handledAudioPause}
         src={url}
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
 
 

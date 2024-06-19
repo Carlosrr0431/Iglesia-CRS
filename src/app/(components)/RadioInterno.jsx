@@ -18,7 +18,7 @@ import { useAppContext } from "../(context)/AppWrapper";
 const Radio = () => {
 
 
-  const {ancho, setAncho} = useAppContext()
+  const { ancho, setAncho } = useAppContext()
 
   useEffect(() => {
     window?.addEventListener("resize", () => {
@@ -33,47 +33,50 @@ const Radio = () => {
 
 
   return (
-    <div className="h-[100dvh]
+    <div className="h-[100dvh] w-full 
        ">
 
-      {
-        ancho < 760 ? (<SwipperRadio />) : (
-          <div className="hidden mb:flex h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
 
-            <div
-              className=""
-            >
+      <div className="block md:hidden    bg-blue-700 mix-blend-multiply ">
+        <SwipperRadio />
+      </div>
 
-              <Radio2 />
+      <div className="hidden  h-[100dvh] z-50 bg-blue-800 mix-blend-multiply mx-auto  md:flex items-center justify-center gap-x-10 ">
 
-            </div>
+        <div
+          className=""
+        >
+
+          <Radio2 />
+
+        </div>
+        <div className=''>
+          <Providers>
+
             <div className=''>
-              <Providers>
-
-                <div className=''>
-                  <ChatResponsive />
-                </div>
-              </Providers>
+              <ChatResponsive />
             </div>
+          </Providers>
+        </div>
 
-            <div className="hidden md:block fixed inset-0 h-screen -z-10">
-              <div className="xl:bg-right xl:bg-no-repeat w-full opacity-80  h-full  translate-z-50 fixed  "></div>
+        <div className="hidden md:block fixed inset-0 h-screen -z-10">
+          <div className="xl:bg-right xl:bg-no-repeat w-full opacity-80  h-full  translate-z-50 fixed  "></div>
 
-              <Image
-                src={Portada}
-                width={0}
-                height={0}
-                alt=""
-                priority={true}
-                className="w-full h-full object-contain"
-              />
+          <Image
+            src={Portada}
+            width={0}
+            height={0}
+            alt=""
+            priority={true}
+            className="w-full h-full object-contain"
+          />
 
 
-            </div>
+        </div>
 
-          </div>
-        )
-      }
+      </div>
+
+
 
 
 

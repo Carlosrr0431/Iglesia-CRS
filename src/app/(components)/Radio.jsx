@@ -123,9 +123,9 @@ const Radio = () => {
 
         </div>
 
-        <div className="visible z-20">
-          <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
-        </div>
+
+        <RadioSpectreCelular url="https://server.radiostreaming.com.ar/8738/stream " />
+
 
         <div className="  text-white  monstserrat text-[17px] md:text-[15px]">
           ESCUCHARTE ME HACE BIEN
