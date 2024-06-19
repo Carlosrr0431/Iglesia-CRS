@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Payments = () => {
+const Payments = () => {
   return (
     <div className='w-full h-screen bg-green-500'></div>
   )
 }
+
+export default Payments
