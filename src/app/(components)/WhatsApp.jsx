@@ -17,7 +17,7 @@ const WhatsApp = () => {
             <Link
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://wa.me/+543878256529?text=Escribenos para poder orar por ti"
+                href="https://wa.me/+543876148398?text=Escribenos para poder orar por ti"
                 className=""
             >
                 <Image
