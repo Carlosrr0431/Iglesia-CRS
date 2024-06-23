@@ -25,11 +25,11 @@ const ModalOracion = ({ setShowModal }) => {
 
 
         <div className={`fixed inset-0  z-50 
-             flex items-center justify-center h-full w-full 
+             flex items-center justify-center h-full w-full  bg-opacity-100  backdrop-blur-sm
              `}>
-            <div className="rounded-[10px] shadow-2xl bg-white/40 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto">
+            <div className="rounded-[10px]  shadow-2xl bg-black/70 shadow-black/20 p-8 m-4 md:max-w-2xl md:mx-auto">
                 <div className="flex">
-                    <h1 className=" w-full text-center text-grey-darkest mb-6">Pedir oración</h1>
+                    <h1 className=" w-full text-center text-white mb-6">Pedir oración</h1>
                     <div className="" onClick={() => setShowModal(false)}>
                         <button className="cursor-pointer">
                             <Image src={Cancel} height={40} width={40} alt="" className="hover:scale-110" />

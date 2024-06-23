@@ -217,9 +217,9 @@ export const ChatResponsive = () => {
                                     placeholder="Escribe tu mensaje..." onKeyUp={enterClick2}
 
                                 />
-                                <button type='submit' className="ml-2  md:w-0 ">
+                                <button type='submit' className="ml-2 h-10 w-10  md:w-0  ">
 
-                                    <BsFillSendFill className=" w-8 cursor-pointer h-8 xs:w-7 xs:h-7  xs:right-4   relative   text-white  hover:scale-110   " />
+                                    <BsFillSendFill className="mx-auto content-center place-content-center align-middle items-center cursor-pointer xs:w-7 xs:h-7  xs:right-4 relative text-white  hover:scale-110 h-8 w-8" />
                                 </button>
                             </form>
                         )

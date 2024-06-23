@@ -148,10 +148,9 @@ const Iglesia = () => {
                             <span className="text-indigo-600"> Iglesia</span>
                         </h2>
                         <p className="mt-4 text-gray-600">
-                            The Eco-Tracker project aims to create a web-based platform that encourages individuals to adopt
-                            sustainable lifestyle choices and actively contribute to environmental conservation. The platform will
-                            provide users with personalized tracking, education, and engagement features to empower them to make
-                            eco-friendly decisions in various aspects of their lives.
+                            El C.R.S. nace por un mandato de Dios a través de un padre ministerial.
+                            En el año 2014 comenzamos a venir a la ciudad de Salta Capital, viajando 250 km desde nuestra ciudad natal: LA NUEVA ORAN. Ya en el mes de Julio junto a nuestros hijos Flavio y Florencia nos establecimos definitivamente aquí, donde la Iglesia funcionaba en diferentes casas de los hermanos.
+
                         </p>
 
                     </div>
@@ -170,14 +169,11 @@ const Iglesia = () => {
                     </div>
                     <div className="order-1 py-12 px-6 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none intro lg:rounded-lg overflow-y-scroll max-h-[40%]  lg:max-h-[80%] biblia ">
                         <h2 className="text-3xl text-gray-800 font-bold">
-                            Nuestros comienzos como
-                            <span className="text-indigo-600"> Iglesia</span>
+                            En estos momentos
+                            <span className="text-indigo-600"> </span>
                         </h2>
                         <p className="mt-4 text-gray-600">
-                            The Eco-Tracker project aims to create a web-based platform that encourages individuals to adopt
-                            sustainable lifestyle choices and actively contribute to environmental conservation. The platform will
-                            provide users with personalized tracking, education, and engagement features to empower them to make
-                            eco-friendly decisions in various aspects of their lives.
+                            En el año 2015 logramos alquilar un salón grande en calle J.A. Fernandez 630 donde hasta la actualidad funciona la Iglesia con una membresía de 150 hijos fieles que asisten a nuestra casa Ministerial. Disfrutando las bendiciones abundantes del Señor, por Julio del 2015 logramos comprar terrenos propios para la edificación de su casa en la entrada de Salta Capítal, donde actualmente comenzando la construcción de un edificio de 520 mt2, que serán instalaciones modernas para exaltar el nombre del Señor.
                         </p>
 
                     </div>
